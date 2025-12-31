@@ -77,6 +77,7 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 - **[bypass-3](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-3.txt)**
 - **[bypass-4](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-4.txt)**
 - **[bypass-5](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-5.txt)**
+- **[bypass-6](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-6.txt)**
 - и т.д.
 
 ### Небезопасные конфиги для обхода SNI/CIDR (bypass-unsecure/)
@@ -89,6 +90,7 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 - **[bypass-unsecure-3](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-3.txt)**
 - **[bypass-unsecure-4](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-4.txt)**
 - **[bypass-unsecure-5](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-5.txt)**
+- **[bypass-unsecure-6](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-6.txt)**
 - и т.д.
 
 ### Конфиги, разделенные по протоколам (split-by-protocols/)
