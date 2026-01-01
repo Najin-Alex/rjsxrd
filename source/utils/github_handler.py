@@ -3,6 +3,7 @@
 from github import Github, Auth, GithubException
 import time
 import os
+import concurrent.futures
 from typing import Optional
 from config.settings import GITHUB_TOKEN, REPO_NAME
 from utils.logger import log, updated_files, _UPDATED_FILES_LOCK
@@ -21,16 +22,16 @@ class GitHubHandler:
         try:
             remaining, limit = self.g.rate_limiting
             if remaining < 100:
-                log(f"Внимание: осталось {remaining}/{limit} запросов к GitHub API")
+                log(f"Warning: {remaining}/{limit} GitHub API requests remaining")
             else:
-                log(f"Доступно запросов к GitHub API: {remaining}/{limit}")
+                log(f"Available GitHub API requests: {remaining}/{limit}")
         except Exception as e:
-            log(f"Не удалось проверить лимиты GitHub API: {e}")
+            log(f"Could not check GitHub API limits: {e}")
 
     def upload_file(self, local_path: str, remote_path: str):
         """Uploads a local file to GitHub repository."""
         if not self._file_exists(local_path):
-            log(f"Файл {local_path} не найден.")
+            log(f"File {local_path} not found.")
             return
 
         with open(local_path, "r", encoding="utf-8") as file:
@@ -50,21 +51,21 @@ class GitHubHandler:
                         basename = self._get_basename(remote_path)
                         self.repo.create_file(
                             path=remote_path,
-                            message=f"Первый коммит {basename}: {self._get_timestamp()}",
+                            message=f"First commit {basename}: {self._get_timestamp()}",
                             content=content,
                         )
-                        log(f"Файл {remote_path} создан.")
+                        log(f"File {remote_path} created.")
                         self._add_to_updated_files(remote_path)
                         return
                     else:
                         msg = e_get.data.get("message", str(e_get))
-                        log(f"Ошибка при получении {remote_path}: {msg}")
+                        log(f"Error getting {remote_path}: {msg}")
                         return
 
                 try:
                     remote_content = file_in_repo.decoded_content.decode("utf-8", errors="replace")
                     if remote_content == content:
-                        log(f"Изменений для {remote_path} нет.")
+                        log(f"No changes for {remote_path}.")
                         return
                 except Exception:
                     pass
@@ -74,36 +75,55 @@ class GitHubHandler:
                 try:
                     self.repo.update_file(
                         path=remote_path,
-                        message=f"Обновление {basename}: {self._get_timestamp()}",
+                        message=f"Update {basename}: {self._get_timestamp()}",
                         content=content,
                         sha=current_sha,
                     )
-                    log(f"Файл {remote_path} обновлён в репозитории.")
+                    log(f"File {remote_path} updated in repository.")
                     self._add_to_updated_files(remote_path)
                     return
                 except GithubException as e_upd:
                     if getattr(e_upd, "status", None) == 409:
                         if attempt < max_retries:
                             wait_time = 0.5 * (2 ** (attempt - 1))
-                            log(f"Конфликт SHA для {remote_path}, попытка {attempt}/{max_retries}, ждем {wait_time} сек")
+                            log(f"SHA conflict for {remote_path}, attempt {attempt}/{max_retries}, waiting {wait_time} sec")
                             time.sleep(wait_time)
                             continue
                         else:
-                            log(f"Не удалось обновить {remote_path} после {max_retries} попыток")
+                            log(f"Could not update {remote_path} after {max_retries} attempts")
                             return
                     else:
                         msg = e_upd.data.get("message", str(e_upd))
-                        log(f"Ошибка при загрузке {remote_path}: {msg}")
+                        log(f"Error uploading {remote_path}: {msg}")
                         return
 
             except Exception as e_general:
                 short_msg = str(e_general)
                 if len(short_msg) > 200:
                     short_msg = short_msg[:200] + "…"
-                log(f"Непредвиденная ошибка при обновлении {remote_path}: {short_msg}")
+                log(f"Unexpected error updating {remote_path}: {short_msg}")
                 return
 
-        log(f"Не удалось обновить {remote_path} после {max_retries} попыток")
+        log(f"Could not update {remote_path} after {max_retries} attempts")
+
+
+    def upload_multiple_files(self, file_pairs: list, dry_run: bool = False):
+        """Uploads multiple config files to GitHub."""
+        max_workers_upload = max(2, min(6, len(file_pairs)))
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers_upload) as upload_pool:
+            upload_futures = []
+
+            for local_path, remote_path in file_pairs:
+                if dry_run:
+                    log(f"Dry-run: skipping upload of {remote_path} (local path {local_path})")
+                else:
+                    upload_futures.append(
+                        upload_pool.submit(self.upload_file, local_path, remote_path)
+                    )
+
+            for uf in concurrent.futures.as_completed(upload_futures):
+                _ = uf.result()
 
 
     def _file_exists(self, path: str) -> bool:

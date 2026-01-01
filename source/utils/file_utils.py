@@ -1,4 +1,4 @@
-"""File handling utilities."""
+"""File handling utilities with refactored, streamlined logic."""
 
 import os
 import ipaddress
@@ -7,6 +7,7 @@ import re
 import base64
 import json
 from utils.logger import log
+from config.settings import SNI_DOMAINS
 
 
 def save_to_local_file(path: str, content: str):
@@ -14,7 +15,7 @@ def save_to_local_file(path: str, content: str):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, "w", encoding="utf-8") as file:
         file.write(content)
-    log(f"Данные сохранены локально в {path}")
+    log(f"Data saved locally to {path}")
 
 
 def load_from_local_file(path: str) -> str:
@@ -123,14 +124,14 @@ def deduplicate_configs(configs: List[str]) -> List[str]:
 
     for cfg in configs:
         c = cfg.strip()
-        if not c or c in seen_full: 
+        if not c or c in seen_full:
             continue
         seen_full.add(c)
 
         hostport = extract_host_port(c)
         if hostport:
             key = f"{hostport[0].lower()}:{hostport[1]}"
-            if key in seen_hostport: 
+            if key in seen_hostport:
                 continue
             seen_hostport.add(key)
         unique_configs.append(c)
@@ -221,3 +222,57 @@ def is_valid_vpn_config_url(line: str) -> bool:
     line = line.strip()
     # Check if the line starts with one of the known VPN protocols followed by ://
     return bool(re.match(r'^(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', line, re.IGNORECASE))
+
+
+def apply_sni_cidr_filter(configs: List[str], filter_secure: bool = True) -> List[str]:
+    """Apply SNI/CIDR filtering to configs, with optional secure filtering."""
+    from config.settings import SNI_DOMAINS
+    from utils.file_utils import load_cidr_whitelist, is_ip_in_cidr_whitelist, extract_ip_from_config
+
+    # Load CIDR whitelist
+    cidr_whitelist = load_cidr_whitelist()
+
+    # Optimize domain list by removing redundant domains
+    sorted_domains = sorted(SNI_DOMAINS, key=len)
+    optimized_domains = []
+
+    for d in sorted_domains:
+        is_redundant = False
+        for existing in optimized_domains:
+            if existing in d:
+                is_redundant = True
+                break
+        if not is_redundant:
+            optimized_domains.append(d)
+
+    # Compile Regex
+    try:
+        pattern_str = r"(?:" + "|".join(re.escape(d) for d in optimized_domains) + r")"
+        sni_regex = re.compile(pattern_str)
+    except Exception as e:
+        log(f"Error compiling Regex: {e}")
+        return []
+
+    filtered_configs = []
+    for config in configs:
+        config = config.strip()
+        if not config:
+            continue
+
+        # Check if config should be included based on SNI or CIDR criteria
+        matches_sni = sni_regex.search(config)
+        matches_cidr = False
+        if cidr_whitelist:
+            ip = extract_ip_from_config(config)
+            if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
+                matches_cidr = True
+
+        # If config matches either SNI or CIDR criteria
+        if matches_sni or matches_cidr:
+            # Only add the config if it's a valid VPN config URL
+            if is_valid_vpn_config_url(config):
+                # Apply security filter based on the parameter
+                if not filter_secure or not has_insecure_setting(config):
+                    filtered_configs.append(config)
+
+    return filtered_configs

@@ -1,525 +1,300 @@
-"""Config processing module for filtering and creating special configs."""
+"""Config processing module with all the main processing logic."""
 
 import os
-import re
-import base64
-import json
+import sys
 import concurrent.futures
-from typing import List, Set
-from config.settings import SNI_DOMAINS, URLS, EXTRA_URLS_FOR_BYPASS, URLS_BASE64, URLS_YAML, MAX_SERVERS_PER_FILE
-from fetchers.fetcher import fetch_data
-from utils.file_utils import extract_host_port, deduplicate_configs, prepare_config_content, filter_secure_configs, load_cidr_whitelist, is_ip_in_cidr_whitelist, extract_ip_from_config
+import base64
+from typing import List, Tuple, Optional
+import sys
+
+# Add the source directory to the path for imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
+
+from config.settings import URLS, URLS_BASE64, URLS_YAML, EXTRA_URLS_FOR_BYPASS, DEFAULT_MAX_WORKERS
+from fetchers.fetcher import fetch_data, build_session
+from utils.file_utils import save_to_local_file, load_from_local_file, split_config_file, deduplicate_configs, prepare_config_content, filter_secure_configs, has_insecure_setting, apply_sni_cidr_filter
 from utils.logger import log
 
 
-def _load_yaml_configs(url: str, sni_regex, cidr_whitelist, filter_secure: bool = True) -> List[str]:
-    """Load configs from YAML file and apply SNI/CIDR filtering."""
-    try:
-        from fetchers.yaml_converter import convert_yaml_to_vpn_configs
-        yaml_content = fetch_data(url)
-
-        # Convert YAML to VPN configs
-        vpn_configs = convert_yaml_to_vpn_configs(yaml_content)
-
-        if not vpn_configs:
-            log(f"Не найдено действительных VPN конфигов в YAML файле {url}")
-            return []
-
-        # Apply SNI filtering (same logic as in _process_file_filtering)
-        filtered_configs = []
-        for config in vpn_configs:
-            config = config.strip()
-            if not config:
-                continue
-            # Apply SNI filtering
-            if sni_regex.search(config):
-                # Only add the config if it's a valid VPN config URL
-                if is_valid_vpn_config_url(config):
-                    filtered_configs.append(config)
-            # Check for CIDR matching
-            elif cidr_whitelist:
-                ip = extract_ip_from_config(config)
-                if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                    # Only add the config if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(config):
-                        filtered_configs.append(config)
-
-        # Filter based on security settings
-        if filter_secure:
-            return filter_secure_configs(filtered_configs)
-        else:
-            return filtered_configs
-    except Exception as e:
-        short_msg = str(e)
-        if len(short_msg) > 200:
-            short_msg = short_msg[:200] + "…"
-        log(f"Ошибка при загрузке YAML-саба {url}: {short_msg}")
-        return []
-
-
-def _load_yaml_configs_unsecure(url: str, sni_regex, cidr_whitelist) -> List[str]:
-    """Load configs from YAML file and apply SNI/CIDR filtering without secure filtering."""
-    try:
-        from fetchers.yaml_converter import convert_yaml_to_vpn_configs
-        yaml_content = fetch_data(url)
-
-        # Convert YAML to VPN configs
-        vpn_configs = convert_yaml_to_vpn_configs(yaml_content)
-
-        if not vpn_configs:
-            log(f"Не найдено действительных VPN конфигов в YAML файле {url}")
-            return []
-
-        # Apply SNI filtering (same logic as in _process_file_filtering_unsecure)
-        filtered_configs = []
-        for config in vpn_configs:
-            config = config.strip()
-            if not config:
-                continue
-            # Apply SNI filtering
-            if sni_regex.search(config):
-                # Only add the config if it's a valid VPN config URL
-                if is_valid_vpn_config_url(config):
-                    filtered_configs.append(config)
-            # Check for CIDR matching
-            elif cidr_whitelist:
-                ip = extract_ip_from_config(config)
-                if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                    # Only add the config if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(config):
-                        filtered_configs.append(config)
-
-        # DO NOT filter out insecure configs from YAML sources - return all
-        return filtered_configs
-    except Exception as e:
-        short_msg = str(e)
-        if len(short_msg) > 200:
-            short_msg = short_msg[:200] + "…"
-        log(f"Ошибка при загрузке unsecure YAML-саба {url}: {short_msg}")
-        return []
-
-
-def is_valid_vpn_config_url(line: str) -> bool:
-    """Check if a line is a valid VPN config URL by verifying it starts with a known protocol followed by ://"""
-    line = line.strip()
-    # Check if the line starts with one of the known VPN protocols followed by ://
-    return bool(re.match(r'^(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', line, re.IGNORECASE))
-
-
-def create_filtered_configs(output_dir: str = "../githubmirror") -> List[str]:
-    """
-    Creates filtered configs for SNI/CIDR bypass in the bypass folder.
-    Also creates bypass-all.txt with all SNI/CIDR bypass servers.
-    Returns a list of created file paths.
-    """
-    # Load CIDR whitelist
-    cidr_whitelist = load_cidr_whitelist()
-
-    # Optimize domain list by removing redundant domains
-    sorted_domains = sorted(SNI_DOMAINS, key=len)
-    optimized_domains = []
-
-    for d in sorted_domains:
-        is_redundant = False
-        for existing in optimized_domains:
-            if existing in d:
-                is_redundant = True
-                break
-        if not is_redundant:
-            optimized_domains.append(d)
-
-    # Compile Regex
-    try:
-        pattern_str = r"(?:" + "|".join(re.escape(d) for d in optimized_domains) + r")"
-        sni_regex = re.compile(pattern_str)
-    except Exception as e:
-        log(f"Ошибка компиляции Regex: {e}")
-        return []
-
-    def _process_file_filtering(file_idx: int) -> List[str]:
-        """Process a single file to filter configs by SNI domains and CIDR."""
-        # Look for files in the default subdirectory
-        local_path = f"{output_dir}/default/{file_idx}.txt"
-        filtered_lines = []
-        if not os.path.exists(local_path):
-            return filtered_lines
-
-        try:
-            with open(local_path, "r", encoding="utf-8") as file:
-                content = file.read()
-
-            # Force separation of configs that might be glued together
-            content = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', content)
-            lines = content.splitlines()
-
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                # Check for SNI domains
-                if sni_regex.search(line):
-                    # Only add the line if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(line):
-                        filtered_lines.append(line)
-                # Check for CIDR matching
-                elif cidr_whitelist:
-                    ip = extract_ip_from_config(line)
-                    if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                        # Only add the line if it's a valid VPN config URL
-                        if is_valid_vpn_config_url(line):
-                            filtered_lines.append(line)
-        except Exception:
-            pass
-        # Filter out insecure configs
-        return filter_secure_configs(filtered_lines)
-
+def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str], List[str]]:
+    """Downloads all configs from all sources. Returns (all_configs, extra_bypass_configs)."""
     all_configs = []
+    extra_bypass_configs = []
 
-    # Process original config files for SNI/CIDR filtering
-    max_workers = min(16, os.cpu_count() + 4)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(_process_file_filtering, i) for i in range(1, len(URLS) + 1)]
-        for future in concurrent.futures.as_completed(futures):
-            all_configs.extend(future.result())
+    # Create output directories
+    os.makedirs(f"{output_dir}/default", exist_ok=True)
+    os.makedirs(f"{output_dir}/bypass", exist_ok=True)
+    os.makedirs(f"{output_dir}/bypass-unsecure", exist_ok=True)
+    os.makedirs(f"{output_dir}/split-by-protocols", exist_ok=True)
+    os.makedirs("../qr-codes", exist_ok=True)
 
-    # Load configs from additional sources (no SNI/CIDR filtering, only deduplication)
-    def _load_extra_configs(url: str) -> List[str]:
-        """Load configs from additional source without SNI/CIDR check."""
-        try:
-            data = fetch_data(url)
-            # Force separation of glued configs
-            data = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', data)
-            lines = data.splitlines()
-            configs = []
-            for line in lines:
-                line = line.strip()
-                if line and not line.startswith('#') and is_valid_vpn_config_url(line):
-                    configs.append(line)
-            # Filter out insecure configs from extra sources
-            return filter_secure_configs(configs)
-        except Exception as e:
-            short_msg = str(e)
-            if len(short_msg) > 200:
-                short_msg = short_msg[:200] + "…"
-            log(f"Ошибка при загрузке {url}: {short_msg}")
-            return []
+    # Download from regular URLs
+    if URLS:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS)))) as executor:
+            futures = [executor.submit(fetch_data, url) for url in URLS]
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    content = future.result()
+                    configs = prepare_config_content(content)
+                    all_configs.extend(configs)
+                except Exception as e:
+                    log(f"Error downloading from regular URL: {str(e)[:200]}...")
 
-    extra_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(EXTRA_URLS_FOR_BYPASS))) as executor:
-        futures = [executor.submit(_load_extra_configs, url) for url in EXTRA_URLS_FOR_BYPASS]
-        for future in concurrent.futures.as_completed(futures):
-            extra_configs.extend(future.result())
+    # Download from base64 URLs
+    if URLS_BASE64:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_BASE64)))) as executor:
+            futures = [executor.submit(fetch_data, url) for url in URLS_BASE64]
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    content = future.result()
+                    # Decode base64 content
+                    decoded_bytes = base64.b64decode(content.strip())
+                    decoded_content = decoded_bytes.decode('utf-8')
+                    configs = prepare_config_content(decoded_content)
+                    all_configs.extend(configs)
+                except Exception as e:
+                    log(f"Error downloading from base64 URL: {str(e)[:200]}...")
 
-    all_configs.extend(extra_configs)
+    # Download from extra bypass URLs (these should be added to bypass configs without SNI/CIDR filtering)
+    if EXTRA_URLS_FOR_BYPASS:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(EXTRA_URLS_FOR_BYPASS)))) as executor:
+            futures = [executor.submit(fetch_data, url) for url in EXTRA_URLS_FOR_BYPASS]
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    content = future.result()
+                    configs = prepare_config_content(content)
+                    extra_bypass_configs.extend(configs)  # Store separately for bypass processing
+                except Exception as e:
+                    log(f"Error downloading from extra bypass URL: {str(e)[:200]}...")
 
-    # Load configs from base64-encoded subscriptions
-    def _load_base64_configs(url: str) -> List[str]:
-        """Load configs from base64-encoded subscription and apply SNI/CIDR filtering like regular configs."""
-        try:
-            data = fetch_data(url)
-            # Decode base64 content
-            try:
-                # Remove any whitespace and decode the base64 content
-                decoded_bytes = base64.b64decode(data.strip())
-                decoded_content = decoded_bytes.decode('utf-8')
-            except Exception as e:
-                log(f"Ошибка декодирования base64 для {url}: {str(e)}")
-                return []
+    # Download and convert from YAML URLs
+    if URLS_YAML:
+        from fetchers.yaml_converter import convert_yaml_to_vpn_configs
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_YAML)))) as executor:
+            futures = [executor.submit(fetch_data, url) for url in URLS_YAML]
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    yaml_content = future.result()
+                    vpn_configs = convert_yaml_to_vpn_configs(yaml_content)
+                    if vpn_configs:
+                        all_configs.extend(vpn_configs)
+                except Exception as e:
+                    log(f"Error downloading or converting YAML: {str(e)[:200]}...")
 
-            # Force separation of glued configs in the decoded content
-            decoded_content = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', decoded_content)
-            lines = decoded_content.splitlines()
-            filtered_configs = []
+    return all_configs, extra_bypass_configs
 
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                # Apply SNI filtering (same logic as in _process_file_filtering)
-                if sni_regex.search(line):
-                    # Only add the line if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(line):
-                        filtered_configs.append(line)
-                # Check for CIDR matching
-                elif cidr_whitelist:
-                    ip = extract_ip_from_config(line)
-                    if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                        # Only add the line if it's a valid VPN config URL
-                        if is_valid_vpn_config_url(line):
-                            filtered_configs.append(line)
 
-            # Filter out insecure configs from base64 sources
-            return filter_secure_configs(filtered_configs)
-        except Exception as e:
-            short_msg = str(e)
-            if len(short_msg) > 200:
-                short_msg = short_msg[:200] + "…"
-            log(f"Ошибка при загрузке base64-саба {url}: {short_msg}")
-            return []
+def create_all_configs_file(all_configs: List[str], output_dir: str = "../githubmirror") -> str:
+    """Creates the all.txt file with all unique configs."""
+    unique_configs = deduplicate_configs(all_configs)
+    all_txt_path = f"{output_dir}/default/all.txt"
+    
+    try:
+        with open(all_txt_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(unique_configs))
+        log(f"Created {all_txt_path} with {len(unique_configs)} unique configs")
+        return all_txt_path
+    except Exception as e:
+        log(f"Error creating all.txt: {e}")
+        return ""
 
-    base64_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(URLS_BASE64))) as executor:
-        futures = [executor.submit(_load_base64_configs, url) for url in URLS_BASE64]
-        for future in concurrent.futures.as_completed(futures):
-            base64_configs.extend(future.result())
 
-    all_configs.extend(base64_configs)
-
-    # Load configs from YAML files
-    yaml_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(URLS_YAML))) as executor:
-        futures = [executor.submit(_load_yaml_configs, url, sni_regex, cidr_whitelist, filter_secure=True) for url in URLS_YAML]
-        for future in concurrent.futures.as_completed(futures):
-            yaml_configs.extend(future.result())
-
-    all_configs.extend(yaml_configs)
-
-    # Filter out configs with insecure settings for bypass configs
+def create_secure_configs_file(all_configs: List[str], output_dir: str = "../githubmirror") -> str:
+    """Creates the all-secure.txt file with only secure configs."""
     secure_configs = filter_secure_configs(all_configs)
-
-    # Deduplicate all configs
-    unique_configs = deduplicate_configs(secure_configs)
-
-    # Create bypass-all.txt with all unique configs in the bypass folder
-    all_txt_path = f"{output_dir}/bypass/bypass-all.txt"
+    unique_secure_configs = deduplicate_configs(secure_configs)
+    all_secure_txt_path = f"{output_dir}/default/all-secure.txt"
+    
     try:
-        with open(all_txt_path, "w", encoding="utf-8") as file:
-            file.write("\n".join(unique_configs))
-        log(f"Создан файл {all_txt_path} с {len(unique_configs)} конфигами")
+        with open(all_secure_txt_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(unique_secure_configs))
+        log(f"Created {all_secure_txt_path} with {len(unique_secure_configs)} unique secure configs")
+        return all_secure_txt_path
     except Exception as e:
-        log(f"Ошибка при сохранении {all_txt_path}: {e}")
+        log(f"Error creating all-secure.txt: {e}")
+        return ""
 
-    # Split into multiple files if needed (starting after the original files)
+
+
+
+def split_configs_to_files(configs: List[str], output_dir: str, filename_prefix: str, max_configs_per_file: int = 300) -> List[str]:
+    """Splits configs into multiple files with a given prefix."""
     created_files = []
-
-    # Split into chunks of MAX_SERVERS_PER_FILE configs each
-    chunks = [unique_configs[i:i + MAX_SERVERS_PER_FILE]
-             for i in range(0, len(unique_configs), MAX_SERVERS_PER_FILE)]
-
-    # Create bypass files named bypass-1.txt, bypass-2.txt, etc.
-    for idx, chunk in enumerate(chunks, 1):  # Start from 1 instead of original config count
-        bypass_filename = f"{output_dir}/bypass/bypass-{idx}.txt"
-        try:
-            with open(bypass_filename, "w", encoding="utf-8") as file:
-                file.write("\n".join(chunk))
-            log(f"Создан файл {bypass_filename} с {len(chunk)} конфигами")
-            created_files.append(bypass_filename)
-        except Exception as e:
-            log(f"Ошибка при сохранении {bypass_filename}: {e}")
-
-    # Add bypass-all.txt to the list of created files to be uploaded
-    created_files.append(all_txt_path)
-
-    # Create unsecure bypass configs (without secure filtering)
-    unsecure_files = create_unsecure_filtered_configs(output_dir)
-    created_files.extend(unsecure_files)
-
-    return created_files
-
-
-def create_unsecure_filtered_configs(output_dir: str = "../githubmirror") -> List[str]:
-    """
-    Creates unfiltered configs for SNI/CIDR bypass in the bypass-unsecure folder.
-    These configs do NOT go through secure filtering (allowing insecure configs).
-    Also creates bypass-unsecure-all.txt with all SNI/CIDR bypass servers without secure filtering.
-    Returns a list of created file paths.
-    """
-    # Load CIDR whitelist
-    cidr_whitelist = load_cidr_whitelist()
-
-    # Optimize domain list by removing redundant domains
-    sorted_domains = sorted(SNI_DOMAINS, key=len)
-    optimized_domains = []
-
-    for d in sorted_domains:
-        is_redundant = False
-        for existing in optimized_domains:
-            if existing in d:
-                is_redundant = True
-                break
-        if not is_redundant:
-            optimized_domains.append(d)
-
-    # Compile Regex
-    try:
-        pattern_str = r"(?:" + "|".join(re.escape(d) for d in optimized_domains) + r")"
-        sni_regex = re.compile(pattern_str)
-    except Exception as e:
-        log(f"Ошибка компиляции Regex для unsecure: {e}")
-        return []
-
-    def _process_file_filtering_unsecure(file_idx: int) -> List[str]:
-        """Process a single file to filter configs by SNI domains and CIDR without secure filtering."""
-        # Look for files in the default subdirectory
-        local_path = f"{output_dir}/default/{file_idx}.txt"
-        filtered_lines = []
-        if not os.path.exists(local_path):
-            return filtered_lines
-
-        try:
-            with open(local_path, "r", encoding="utf-8") as file:
-                content = file.read()
-
-            # Force separation of configs that might be glued together
-            content = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', content)
-            lines = content.splitlines()
-
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                # Check for SNI domains
-                if sni_regex.search(line):
-                    # Only add the line if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(line):
-                        filtered_lines.append(line)
-                # Check for CIDR matching
-                elif cidr_whitelist:
-                    ip = extract_ip_from_config(line)
-                    if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                        # Only add the line if it's a valid VPN config URL
-                        if is_valid_vpn_config_url(line):
-                            filtered_lines.append(line)
-        except Exception:
-            pass
-        # DO NOT filter out insecure configs - return all configs
-        return filtered_lines
-
-    all_configs = []
-
-    # Process original config files for SNI/CIDR filtering without secure filtering
-    max_workers = min(16, os.cpu_count() + 4)
-    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = [executor.submit(_process_file_filtering_unsecure, i) for i in range(1, len(URLS) + 1)]
-        for future in concurrent.futures.as_completed(futures):
-            all_configs.extend(future.result())
-
-    # Load configs from additional sources (no SNI/CIDR filtering, only deduplication)
-    def _load_extra_configs_unsecure(url: str) -> List[str]:
-        """Load configs from additional source without SNI/CIDR check or secure filtering."""
-        try:
-            data = fetch_data(url)
-            # Force separation of glued configs
-            data = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', data)
-            lines = data.splitlines()
-            configs = []
-            for line in lines:
-                line = line.strip()
-                if line and not line.startswith('#') and is_valid_vpn_config_url(line):
-                    configs.append(line)
-            # DO NOT filter out insecure configs from extra sources - return all
-            return configs
-        except Exception as e:
-            short_msg = str(e)
-            if len(short_msg) > 200:
-                short_msg = short_msg[:200] + "…"
-            log(f"Ошибка при загрузке unsecure {url}: {short_msg}")
-            return []
-
-    extra_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(EXTRA_URLS_FOR_BYPASS))) as executor:
-        futures = [executor.submit(_load_extra_configs_unsecure, url) for url in EXTRA_URLS_FOR_BYPASS]
-        for future in concurrent.futures.as_completed(futures):
-            extra_configs.extend(future.result())
-
-    all_configs.extend(extra_configs)
-
-    # Load configs from base64-encoded subscriptions
-    def _load_base64_configs_unsecure(url: str) -> List[str]:
-        """Load configs from base64-encoded subscription and apply SNI/CIDR filtering without secure filtering."""
-        try:
-            data = fetch_data(url)
-            # Decode base64 content
-            try:
-                # Remove any whitespace and decode the base64 content
-                decoded_bytes = base64.b64decode(data.strip())
-                decoded_content = decoded_bytes.decode('utf-8')
-            except Exception as e:
-                log(f"Ошибка декодирования base64 для unsecure {url}: {str(e)}")
-                return []
-
-            # Force separation of glued configs in the decoded content
-            decoded_content = re.sub(r'(vmess|vless|trojan|ss|ssr|tuic|hysteria|hysteria2|hy2)://', r'\n\1://', decoded_content)
-            lines = decoded_content.splitlines()
-            filtered_configs = []
-
-            for line in lines:
-                line = line.strip()
-                if not line:
-                    continue
-                # Apply SNI filtering (same logic as in _process_file_filtering_unsecure)
-                if sni_regex.search(line):
-                    # Only add the line if it's a valid VPN config URL
-                    if is_valid_vpn_config_url(line):
-                        filtered_configs.append(line)
-                # Check for CIDR matching
-                elif cidr_whitelist:
-                    ip = extract_ip_from_config(line)
-                    if ip and is_ip_in_cidr_whitelist(ip, cidr_whitelist):
-                        # Only add the line if it's a valid VPN config URL
-                        if is_valid_vpn_config_url(line):
-                            filtered_configs.append(line)
-
-            # DO NOT filter out insecure configs from base64 sources - return all
-            return filtered_configs
-        except Exception as e:
-            short_msg = str(e)
-            if len(short_msg) > 200:
-                short_msg = short_msg[:200] + "…"
-            log(f"Ошибка при загрузке unsecure base64-саба {url}: {short_msg}")
-            return []
-
-    base64_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(URLS_BASE64))) as executor:
-        futures = [executor.submit(_load_base64_configs_unsecure, url) for url in URLS_BASE64]
-        for future in concurrent.futures.as_completed(futures):
-            base64_configs.extend(future.result())
-
-    all_configs.extend(base64_configs)
-
-    # Load configs from YAML files
-    yaml_configs = []
-    with concurrent.futures.ThreadPoolExecutor(max_workers=min(4, len(URLS_YAML))) as executor:
-        futures = [executor.submit(_load_yaml_configs_unsecure, url, sni_regex, cidr_whitelist) for url in URLS_YAML]
-        for future in concurrent.futures.as_completed(futures):
-            yaml_configs.extend(future.result())
-
-    all_configs.extend(yaml_configs)
-
-    # DO NOT filter out configs with insecure settings - keep all configs
-    unsecure_configs = all_configs
-
-    # Deduplicate all configs
-    unique_configs = deduplicate_configs(unsecure_configs)
-
-    # Create bypass-unsecure-all.txt with all unique configs in the bypass-unsecure folder
-    all_txt_path = f"{output_dir}/bypass-unsecure/bypass-unsecure-all.txt"
-    try:
-        with open(all_txt_path, "w", encoding="utf-8") as file:
-            file.write("\n".join(unique_configs))
-        log(f"Создан файл {all_txt_path} с {len(unique_configs)} конфигами (unsecure)")
-    except Exception as e:
-        log(f"Ошибка при сохранении {all_txt_path}: {e}")
-
-    # Split into multiple files if needed
-    created_files = []
-
-    # Split into chunks of MAX_SERVERS_PER_FILE configs each
-    chunks = [unique_configs[i:i + MAX_SERVERS_PER_FILE]
-             for i in range(0, len(unique_configs), MAX_SERVERS_PER_FILE)]
-
-    # Create bypass-unsecure files named bypass-unsecure-1.txt, bypass-unsecure-2.txt, etc.
+    
+    # Split into chunks
+    chunks = [configs[i:i + max_configs_per_file] for i in range(0, len(configs), max_configs_per_file)]
+    
     for idx, chunk in enumerate(chunks, 1):
-        bypass_filename = f"{output_dir}/bypass-unsecure/bypass-unsecure-{idx}.txt"
+        filename = f"{output_dir}/{filename_prefix}-{idx}.txt"
         try:
-            with open(bypass_filename, "w", encoding="utf-8") as file:
-                file.write("\n".join(chunk))
-            log(f"Создан файл {bypass_filename} с {len(chunk)} конфигами (unsecure)")
-            created_files.append(bypass_filename)
+            with open(filename, "w", encoding="utf-8") as f:
+                f.write("\n".join(chunk))
+            log(f"Created {filename} with {len(chunk)} configs")
+            created_files.append(filename)
         except Exception as e:
-            log(f"Ошибка при сохранении {bypass_filename}: {e}")
-
-    # Add bypass-unsecure-all.txt to the list of created files to be uploaded
-    created_files.append(all_txt_path)
-
+            log(f"Error creating {filename}: {e}")
+    
     return created_files
+
+
+def create_protocol_split_files(all_configs: List[str], output_dir: str = "../githubmirror") -> List[Tuple[str, str]]:
+    """Creates protocol-specific files in the split-by-protocols folder, both secure and unsecure versions."""
+    # Define supported protocols
+    protocols = ['vless', 'vmess', 'trojan', 'ss', 'ssr', 'tuic', 'hysteria', 'hysteria2', 'hy2']
+
+    # Separate configs by protocol and security
+    protocol_configs = {protocol: [] for protocol in protocols}
+    protocol_secure_configs = {protocol: [] for protocol in protocols}
+
+    for config in all_configs:
+        # Determine the protocol from the config line
+        config_lower = config.lower()
+        matched_protocol = None
+
+        for protocol in protocols:
+            if config_lower.startswith(f"{protocol}://"):
+                matched_protocol = protocol
+                break
+
+        if matched_protocol:
+            # Add to unsecure version (all configs for this protocol)
+            protocol_configs[matched_protocol].append(config)
+
+            # Add to secure version only if it's secure
+            if not has_insecure_setting(config):
+                protocol_secure_configs[matched_protocol].append(config)
+
+    # Create file pairs for upload
+    file_pairs = []
+
+    # Create unsecure protocol files (all configs for each protocol)
+    for protocol, configs in protocol_configs.items():
+        if configs:  # Only create file if there are configs for this protocol
+            filename = f"{protocol}.txt"
+            filepath = os.path.join(f"{output_dir}/split-by-protocols", filename)
+
+            # Remove duplicates while preserving order
+            unique_configs = list(dict.fromkeys(configs))  # Remove duplicates while preserving order
+
+            try:
+                with open(filepath, "w", encoding="utf-8") as f:
+                    f.write("\n".join(unique_configs))
+                log(f"Created file {filepath} with {len(unique_configs)} configs ({protocol})")
+
+                file_pairs.append((filepath, f"githubmirror/split-by-protocols/{filename}"))
+            except Exception as e:
+                log(f"Error creating {filepath}: {e}")
+
+    # Create secure protocol files (only secure configs for each protocol)
+    for protocol, configs in protocol_secure_configs.items():
+        if configs:  # Only create file if there are secure configs for this protocol
+            filename = f"{protocol}-secure.txt"
+            filepath = os.path.join(f"{output_dir}/split-by-protocols", filename)
+
+            # Remove duplicates while preserving order
+            unique_configs = list(dict.fromkeys(configs))  # Remove duplicates while preserving order
+
+            try:
+                with open(filepath, "w", encoding="utf-8") as f:
+                    f.write("\n".join(unique_configs))
+                log(f"Created file {filepath} with {len(unique_configs)} secure configs ({protocol})")
+
+                file_pairs.append((filepath, f"githubmirror/split-by-protocols/{filename}"))
+            except Exception as e:
+                log(f"Error creating {filepath}: {e}")
+
+    return file_pairs
+
+
+def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, str]]:
+    """Main processing function that orchestrates the entire config generation process."""
+    # Step 1: Download all configs from all sources
+    log("Downloading all configs from all sources...")
+    all_configs, extra_bypass_configs = download_all_configs(output_dir)
+    log(f"Downloaded {len(all_configs)} total configs and {len(extra_bypass_configs)} extra bypass configs")
+
+    # Step 2: Create all.txt file (all unique configs)
+    log("Creating all.txt file...")
+    all_txt_file = create_all_configs_file(all_configs, output_dir)
+
+    # Step 3: Create all-secure.txt file (only secure configs)
+    log("Creating all-secure.txt file...")
+    all_secure_txt_file = create_secure_configs_file(all_configs, output_dir)
+
+    # Step 4: Create bypass-all.txt file (SNI/CIDR bypass configs: regular + base64 + yaml with SNI/CIDR filtering + extra bypass without SNI/CIDR filtering)
+    log("Creating bypass-all.txt file...")
+    # Apply SNI/CIDR filtering to main configs (regular + base64 + yaml)
+    sni_cidr_filtered_configs = apply_sni_cidr_filter(all_configs, filter_secure=True)
+    # Add extra bypass configs (without SNI/CIDR filtering but with secure filtering)
+    secure_extra_bypass_configs = filter_secure_configs(extra_bypass_configs)
+    all_bypass_configs = sni_cidr_filtered_configs + secure_extra_bypass_configs
+    unique_bypass_configs = deduplicate_configs(all_bypass_configs)
+
+    bypass_all_txt_path = f"{output_dir}/bypass/bypass-all.txt"
+    try:
+        with open(bypass_all_txt_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(unique_bypass_configs))
+        log(f"Created {bypass_all_txt_path} with {len(unique_bypass_configs)} unique bypass configs")
+        bypass_all_txt_file = bypass_all_txt_path
+    except Exception as e:
+        log(f"Error creating bypass-all.txt: {e}")
+        bypass_all_txt_file = ""
+
+    # Step 5: Split bypass configs into multiple files
+    log("Splitting bypass configs into multiple files...")
+    bypass_files = split_configs_to_files(unique_bypass_configs, f"{output_dir}/bypass", "bypass")
+
+    # Step 6: Create bypass-unsecure-all.txt file (SNI/CIDR bypass configs including insecure)
+    log("Creating bypass-unsecure-all.txt file...")
+    # Apply SNI/CIDR filtering to main configs (regular + base64 + yaml) without secure filtering
+    sni_cidr_filtered_unsecure_configs = apply_sni_cidr_filter(all_configs, filter_secure=False)
+    # Add extra bypass configs (without SNI/CIDR filtering and without secure filtering)
+    all_bypass_unsecure_configs = sni_cidr_filtered_unsecure_configs + extra_bypass_configs
+    unique_bypass_unsecure_configs = deduplicate_configs(all_bypass_unsecure_configs)
+
+    bypass_unsecure_all_txt_path = f"{output_dir}/bypass-unsecure/bypass-unsecure-all.txt"
+    try:
+        with open(bypass_unsecure_all_txt_path, "w", encoding="utf-8") as f:
+            f.write("\n".join(unique_bypass_unsecure_configs))
+        log(f"Created {bypass_unsecure_all_txt_path} with {len(unique_bypass_unsecure_configs)} unique unsecure bypass configs")
+        bypass_unsecure_all_txt_file = bypass_unsecure_all_txt_path
+    except Exception as e:
+        log(f"Error creating bypass-unsecure-all.txt: {e}")
+        bypass_unsecure_all_txt_file = ""
+
+    # Step 7: Split bypass-unsecure configs into multiple files
+    log("Splitting bypass-unsecure configs into multiple files...")
+    bypass_unsecure_files = split_configs_to_files(unique_bypass_unsecure_configs, f"{output_dir}/bypass-unsecure", "bypass-unsecure")
+
+    # Step 8: Create protocol-specific files
+    log("Creating protocol-specific files...")
+    all_protocol_configs = all_configs + extra_bypass_configs  # Include extra bypass configs in protocol splitting
+    protocol_files = create_protocol_split_files(all_protocol_configs, output_dir)
+
+    # Prepare file pairs for upload
+    file_pairs = []
+
+    # Add default files
+    if all_txt_file:
+        file_pairs.append((all_txt_file, "githubmirror/default/all.txt"))
+    if all_secure_txt_file:
+        file_pairs.append((all_secure_txt_file, "githubmirror/default/all-secure.txt"))
+
+    # Add bypass files
+    if bypass_all_txt_file:
+        file_pairs.append((bypass_all_txt_file, "githubmirror/bypass/bypass-all.txt"))
+    for bypass_file in bypass_files:
+        filename = os.path.basename(bypass_file)
+        file_pairs.append((bypass_file, f"githubmirror/bypass/{filename}"))
+
+    # Add bypass-unsecure files
+    if bypass_unsecure_all_txt_file:
+        file_pairs.append((bypass_unsecure_all_txt_file, "githubmirror/bypass-unsecure/bypass-unsecure-all.txt"))
+    for bypass_unsecure_file in bypass_unsecure_files:
+        filename = os.path.basename(bypass_unsecure_file)
+        file_pairs.append((bypass_unsecure_file, f"githubmirror/bypass-unsecure/{filename}"))
+
+    # Add protocol files (already in correct format)
+    file_pairs.extend(protocol_files)
+
+    return file_pairs
