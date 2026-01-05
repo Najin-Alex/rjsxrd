@@ -200,8 +200,11 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 <summary>Гайд для Windows, Linux</summary>
 
 **1.** Скачиваем **«Throne»** - [Ссылка](https://github.com/throneproj/Throne/releases)
+
 Windows 10/11 - windows64.zip
+
 Windows 7/8/8.1 - windowslegacy64.zip
+
 Linux - linux-amd64.zip
 
 Можно использовать **«nekoray»** - [Ссылка](https://github.com/MatsuriDayo/nekoray/releases)
