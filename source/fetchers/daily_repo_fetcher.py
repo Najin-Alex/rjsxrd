@@ -47,36 +47,51 @@ def fetch_daily_configs(base_url: str, date: datetime.date) -> Optional[List[str
 def fetch_daily_configs_with_timezone_fallback(base_url: str, target_date: Optional[datetime.date] = None) -> List[str]:
     """Fetch configs from daily-updated repository with timezone fallback logic.
 
-    Tries to fetch configs for:
-    1. Target date (default: today)
-    2. Day before target date
-    3. Day after target date
+    Tries to fetch configs starting from target date, then expands to previous and next days
+    until successfully fetching configs from 10 different dates.
 
-    Returns the first successful result, or empty list if all attempts fail.
+    Returns combined configs from up to 10 successful fetches, or empty list if all attempts fail.
     """
     if target_date is None:
         target_date = datetime.date.today()
 
-    # Define the dates to try in order of preference
-    dates_to_try = [
-        target_date,                    # Current date
-        target_date - datetime.timedelta(days=1),  # Day before
-        target_date + datetime.timedelta(days=1)   # Day after
-    ]
-
     all_configs = []
+    successful_fetches = 0
+    max_fetches = 10
+    date_offset = 0
 
-    for date in dates_to_try:
-        configs = fetch_daily_configs(base_url, date)
-        if configs is not None:
-            log(f"Successfully fetched configs for date {date} ({generate_date_filename(date)})")
-            all_configs.extend(configs)
-            # We found configs for this date, so we can return them
-            # (We could also continue to collect configs from other dates if needed)
+    # Continue fetching until we reach max_fetches or exhaust reasonable date range
+    while successful_fetches < max_fetches:
+        dates_to_try = []
+
+        # Add current date_offset (both positive and negative)
+        if date_offset == 0:
+            dates_to_try.append(target_date)
+        else:
+            dates_to_try.append(target_date + datetime.timedelta(days=date_offset))
+            dates_to_try.append(target_date - datetime.timedelta(days=date_offset))
+
+        for date in dates_to_try:
+            if successful_fetches >= max_fetches:
+                break
+
+            configs = fetch_daily_configs(base_url, date)
+            if configs is not None:
+                log(f"Successfully fetched configs for date {date} ({generate_date_filename(date)}) - {len(configs)} configs")
+                all_configs.extend(configs)
+                successful_fetches += 1
+                if successful_fetches >= max_fetches:
+                    break
+
+        date_offset += 1
+
+        # Limit search to reasonable range (e.g., 30 days in either direction)
+        if date_offset > 30:
             break
 
+    log(f"Completed fetching. Successfully fetched configs from {successful_fetches} different dates")
     if not all_configs:
-        log(f"No configs found for dates: {[generate_date_filename(d) for d in dates_to_try]}")
+        log(f"No configs found after trying multiple dates")
 
     return all_configs
 
