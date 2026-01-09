@@ -1,4 +1,4 @@
-trojan://bcacaab-baca-baca-dbac-accaabbcbacb@127.0.0.1:1080?security=tls&type=tcp#%F0%9F%94%84%20LATEST-UPDATE%20%F0%9F%93%85%20Fri-09-Jan-2026 21:55
+trojan://bcacaab-baca-baca-dbac-accaabbcbacb@127.0.0.1:1080?security=tls&type=tcp#%F0%9F%94%84%20LATEST-UPDATE%20%F0%9F%93%85%20Fri-09-Jan-2026 22:47
 vless://e615a5ba-fce3-4ffa-9c86-b0327a8a107a@185.235.241.99:443?encryption=none&amp;security=tls&amp;insecure=1&amp;allowInsecure=1&amp;type=ws&amp;path=%2Fhormoz#telegram%20%E2%98%82%EF%B8%8F%20dailyv2ry
 vless://a553d8fb-69f2-4929-8cdc-913ba65779e2@84.32.231.44:443?encryption=none&amp;flow=xtls-rprx-vision&amp;security=reality&amp;sni=www.google.com&amp;fp=chrome&amp;pbk=SwPnfWBSnMtxVvsNEzcoS4U8OmKLUYZi54FLskdxgA4&amp;sid=123abc&amp;type=tcp&amp;headerType=none#telegram%20%F0%9F%8D%8A%20dailyv2ry
 vless://c9b45f2f-6cbe-4a86-b4d2-a327f4055a59@104.18.104.68:443?encryption=none&amp;security=tls&amp;sni=001.eLeCtROcElLCO-cf-001.WOrKERS.Dev&amp;fp=chrome&amp;alpn=http%2F1.1&amp;insecure=0&amp;allowInsecure=0&amp;type=ws&amp;host=001.electrocellco-cf-001.workers.dev&amp;path=%2FeyJqdW5rIjoiUmdrRUNsU0lwYThBTlp2bSIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbIjE4NS4yMTMuMjExLjI5IiwiMzEuNDQuMi41NyIsIjc3LjI0Ni4xMDguMTMwIl19%3Fed%3D2560#telegram%20%F0%9F%8C%9F%20dailyv2ry
@@ -2540,6 +2540,7 @@ trojan://telegram-id-privatevpns@63.179.170.8:22222?security=tls&amp;alpn=http/1
 trojan://telegram-id-privatevpns@15.224.1.8:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S103)
 trojan://telegram-id-privatevpns@13.39.204.51:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S104)
 trojan://telegram-id-privatevpns@3.79.126.10:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S102)
+trojan://telegram-id-privatevpns@51.44.57.66:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#(S103)
 trojan://2ee85121-31de-4581-a492-eb00f606e392@192.3.107.252:443?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=rc8.freeguard.org#%40VMESSIR4N%20%D8%AC%D9%87%D8%AA%20%D8%AE%D8%B1%DB%8C%D8%AF%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF
 trojan://trojan@ip.sb:8443?path=%2F&amp;security=tls&amp;host=fofang.pages.dev&amp;type=ws&amp;sni=fofang.pages.dev#%40VMESSIR4N%20%D8%AC%D9%87%D8%AA%20%D8%AE%D8%B1%DB%8C%D8%AF%20%DA%A9%D8%A7%D9%86%D9%81%DB%8C%DA%AF
 trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@mfa.gov.ua:443?path=%2F&amp;security=tls&amp;host=_acme-challenge.2go.cloudns.be&amp;type=ws&amp;sni=_acme-challenge.2go.cloudns.be#O%2037%20%28%40Outline_Vpn%29%20free

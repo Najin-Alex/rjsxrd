@@ -34,6 +34,7 @@ EXTRA_URLS_FOR_BYPASS = [
     "https://raw.githubusercontent.com/55prosek-lgtm/vpn_config_for_russia/refs/heads/main/whitelist.txt",
     "https://sub.luxusvpn.app/KYyB3aWnYmGx7hRN",
     "https://sub.wetruth.workers.dev/",
+    "https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/main/configs/russia_whitelist.txt"
 ]
 
 # Base64-encoded subscription URLs
