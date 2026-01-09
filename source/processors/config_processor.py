@@ -17,10 +17,11 @@ from utils.file_utils import save_to_local_file, load_from_local_file, split_con
 from utils.logger import log
 
 
-def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str], List[str]]:
-    """Downloads all configs from all sources. Returns (all_configs, extra_bypass_configs)."""
+def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str], List[str], List[List[str]]]:
+    """Downloads all configs from all sources. Returns (all_configs, extra_bypass_configs, numbered_configs)."""
     all_configs = []
     extra_bypass_configs = []
+    numbered_configs = []  # Will store configs grouped by source for numbered files
 
     # Create output directories
     os.makedirs(f"{output_dir}/default", exist_ok=True)
@@ -29,19 +30,49 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
     os.makedirs(f"{output_dir}/split-by-protocols", exist_ok=True)
     os.makedirs("../qr-codes", exist_ok=True)
 
-    # Download from regular URLs
+    # Download from regular URLs (these will become numbered files in default/)
+    # We need to preserve the order of URLs, so we map futures back to their indices
     if URLS:
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS)))) as executor:
-            futures = [executor.submit(fetch_data, url) for url in URLS]
-            for future in concurrent.futures.as_completed(futures):
+            # Submit all futures
+            future_to_index = {executor.submit(fetch_data, url): i for i, url in enumerate(URLS)}
+
+            # Process completed futures
+            for future in concurrent.futures.as_completed(future_to_index):
                 try:
                     content = future.result()
                     configs = prepare_config_content(content)
                     all_configs.extend(configs)
+
+                    # Get the original index to preserve order
+                    index = future_to_index[future]
+
+                    # Ensure we have enough slots in numbered_configs list
+                    while len(numbered_configs) <= index:
+                        numbered_configs.append([])
+
+                    # Store configs in the correct position
+                    numbered_configs[index].extend(configs)
+
                 except Exception as e:
                     log(f"Error downloading from regular URL: {str(e)[:200]}...")
 
-    # Download from base64 URLs
+    # Download from extra bypass URLs (these should be added to bypass configs without SNI/CIDR filtering)
+    # These should also be added to numbered configs after URLS configs
+    if EXTRA_URLS_FOR_BYPASS:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(EXTRA_URLS_FOR_BYPASS)))) as executor:
+            futures = [executor.submit(fetch_data, url) for url in EXTRA_URLS_FOR_BYPASS]
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    content = future.result()
+                    configs = prepare_config_content(content)
+                    extra_bypass_configs.extend(configs)  # Store separately for bypass processing
+                    all_configs.extend(configs)  # Also add to all configs
+                    numbered_configs.append(configs)  # Add to numbered configs after URLS
+                except Exception as e:
+                    log(f"Error downloading from extra bypass URL: {str(e)[:200]}...")
+
+    # Download from base64 URLs (these should be added to numbered configs after extra bypass)
     if URLS_BASE64:
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_BASE64)))) as executor:
             futures = [executor.submit(fetch_data, url) for url in URLS_BASE64]
@@ -53,22 +84,11 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
                     decoded_content = decoded_bytes.decode('utf-8')
                     configs = prepare_config_content(decoded_content)
                     all_configs.extend(configs)
+                    numbered_configs.append(configs)  # Add to numbered configs after extra bypass
                 except Exception as e:
                     log(f"Error downloading from base64 URL: {str(e)[:200]}...")
 
-    # Download from extra bypass URLs (these should be added to bypass configs without SNI/CIDR filtering)
-    if EXTRA_URLS_FOR_BYPASS:
-        with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(EXTRA_URLS_FOR_BYPASS)))) as executor:
-            futures = [executor.submit(fetch_data, url) for url in EXTRA_URLS_FOR_BYPASS]
-            for future in concurrent.futures.as_completed(futures):
-                try:
-                    content = future.result()
-                    configs = prepare_config_content(content)
-                    extra_bypass_configs.extend(configs)  # Store separately for bypass processing
-                except Exception as e:
-                    log(f"Error downloading from extra bypass URL: {str(e)[:200]}...")
-
-    # Download and convert from YAML URLs
+    # Download and convert from YAML URLs (these should be added to numbered configs after base64)
     if URLS_YAML:
         from fetchers.yaml_converter import convert_yaml_to_vpn_configs
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_YAML)))) as executor:
@@ -79,18 +99,20 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
                     vpn_configs = convert_yaml_to_vpn_configs(yaml_content)
                     if vpn_configs:
                         all_configs.extend(vpn_configs)
+                        numbered_configs.append(vpn_configs)  # Add to numbered configs after base64
                 except Exception as e:
                     log(f"Error downloading or converting YAML: {str(e)[:200]}...")
 
-    # Download from daily-updated repository
+    # Download from daily-updated repository (these should be added to numbered configs after YAML)
     try:
         daily_configs = fetch_configs_from_daily_repo()
         all_configs.extend(daily_configs)
+        numbered_configs.append(daily_configs)  # Add to numbered configs after YAML
         log(f"Downloaded {len(daily_configs)} configs from daily-updated repository")
     except Exception as e:
         log(f"Error downloading from daily-updated repository: {str(e)[:200]}...")
 
-    return all_configs, extra_bypass_configs
+    return all_configs, extra_bypass_configs, numbered_configs
 
 
 def create_all_configs_file(all_configs: List[str], output_dir: str = "../githubmirror") -> str:
@@ -223,22 +245,46 @@ def create_protocol_split_files(all_configs: List[str], output_dir: str = "../gi
     return file_pairs
 
 
+def create_numbered_default_files(numbered_configs: List[List[str]], output_dir: str = "../githubmirror") -> List[str]:
+    """Creates numbered files (1.txt, 2.txt, etc.) in the default directory based on URL order."""
+    created_files = []
+
+    for i, configs in enumerate(numbered_configs):
+        if configs:  # Only create file if there are configs for this source
+            filename = f"{i + 1}.txt"
+            filepath = os.path.join(f"{output_dir}/default", filename)
+
+            try:
+                with open(filepath, "w", encoding="utf-8") as f:
+                    f.write("\n".join(configs))
+                log(f"Created numbered file {filepath} with {len(configs)} configs")
+                created_files.append(filepath)
+            except Exception as e:
+                log(f"Error creating numbered file {filepath}: {e}")
+
+    return created_files
+
+
 def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, str]]:
     """Main processing function that orchestrates the entire config generation process."""
     # Step 1: Download all configs from all sources
     log("Downloading all configs from all sources...")
-    all_configs, extra_bypass_configs = download_all_configs(output_dir)
-    log(f"Downloaded {len(all_configs)} total configs and {len(extra_bypass_configs)} extra bypass configs")
+    all_configs, extra_bypass_configs, numbered_configs = download_all_configs(output_dir)
+    log(f"Downloaded {len(all_configs)} total configs, {len(extra_bypass_configs)} extra bypass configs, and {len(numbered_configs)} sources for numbered files")
 
-    # Step 2: Create all.txt file (all unique configs)
+    # Step 2: Create numbered default files (1.txt, 2.txt, etc.) based on URL order
+    log("Creating numbered default files...")
+    numbered_default_files = create_numbered_default_files(numbered_configs, output_dir)
+
+    # Step 3: Create all.txt file (all unique configs)
     log("Creating all.txt file...")
     all_txt_file = create_all_configs_file(all_configs, output_dir)
 
-    # Step 3: Create all-secure.txt file (only secure configs)
+    # Step 4: Create all-secure.txt file (only secure configs)
     log("Creating all-secure.txt file...")
     all_secure_txt_file = create_secure_configs_file(all_configs, output_dir)
 
-    # Step 4: Create bypass-all.txt file (SNI/CIDR bypass configs: regular + base64 + yaml with SNI/CIDR filtering + extra bypass without SNI/CIDR filtering)
+    # Step 5: Create bypass-all.txt file (SNI/CIDR bypass configs: regular + base64 + yaml with SNI/CIDR filtering + extra bypass without SNI/CIDR filtering)
     log("Creating bypass-all.txt file...")
     # Apply SNI/CIDR filtering to main configs (regular + base64 + yaml)
     sni_cidr_filtered_configs = apply_sni_cidr_filter(all_configs, filter_secure=True)
@@ -257,11 +303,11 @@ def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, 
         log(f"Error creating bypass-all.txt: {e}")
         bypass_all_txt_file = ""
 
-    # Step 5: Split bypass configs into multiple files
+    # Step 6: Split bypass configs into multiple files
     log("Splitting bypass configs into multiple files...")
     bypass_files = split_configs_to_files(unique_bypass_configs, f"{output_dir}/bypass", "bypass")
 
-    # Step 6: Create bypass-unsecure-all.txt file (SNI/CIDR bypass configs including insecure)
+    # Step 7: Create bypass-unsecure-all.txt file (SNI/CIDR bypass configs including insecure)
     log("Creating bypass-unsecure-all.txt file...")
     # Apply SNI/CIDR filtering to main configs (regular + base64 + yaml) without secure filtering
     sni_cidr_filtered_unsecure_configs = apply_sni_cidr_filter(all_configs, filter_secure=False)
@@ -279,17 +325,22 @@ def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, 
         log(f"Error creating bypass-unsecure-all.txt: {e}")
         bypass_unsecure_all_txt_file = ""
 
-    # Step 7: Split bypass-unsecure configs into multiple files
+    # Step 8: Split bypass-unsecure configs into multiple files
     log("Splitting bypass-unsecure configs into multiple files...")
     bypass_unsecure_files = split_configs_to_files(unique_bypass_unsecure_configs, f"{output_dir}/bypass-unsecure", "bypass-unsecure")
 
-    # Step 8: Create protocol-specific files
+    # Step 9: Create protocol-specific files
     log("Creating protocol-specific files...")
     all_protocol_configs = all_configs + extra_bypass_configs  # Include extra bypass configs in protocol splitting
     protocol_files = create_protocol_split_files(all_protocol_configs, output_dir)
 
     # Prepare file pairs for upload
     file_pairs = []
+
+    # Add numbered default files
+    for numbered_file in numbered_default_files:
+        filename = os.path.basename(numbered_file)
+        file_pairs.append((numbered_file, f"githubmirror/default/{filename}"))
 
     # Add default files
     if all_txt_file:
