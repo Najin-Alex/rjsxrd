@@ -128,3 +128,6 @@ https://raw.githubusercontent.com/Ai123999/7Sand/refs/heads/main/7Sand_Notorgame
 https://raw.githubusercontent.com/Ai123999/5Frid/refs/heads/main/5Frid_Notorgamers
 http://fsub.flux.2bd.net/githubmirror/bypass/bypass-all.txt
 https://storage.yandexcloud.net/cid-vpn/whitelist.txt
+https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/CUSTOM
+https://bp.wl.free.nf/confs/wl.txt
+https://bp.wl.free.nf/confs/merged.txt
