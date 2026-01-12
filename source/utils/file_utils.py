@@ -160,8 +160,22 @@ def has_insecure_setting(config_line: str) -> bool:
             if value in ['1', 'true', 'yes', 'on']:
                 return True
 
+    # Check for skip-cert-verify in query parameters (used in some clients like TUIC)
+    if 'skip-cert-verify=' in config_lower:
+        skip_cert_verify_match = re.search(r'skip-cert-verify=([^&\?#]+)', config_lower)
+        if skip_cert_verify_match:
+            value = skip_cert_verify_match.group(1).strip()
+            if value in ['1', 'true', 'yes', 'on', 'enabled']:
+                return True
+
     # Check for security=none (no encryption)
     if 'security=none' in config_lower:
+        return True
+
+    # Check for encryption=none in VLESS configs (when not using TLS/REALITY)
+    # Note: encryption=none with TLS/REALITY is acceptable, but we can't determine transport layer here
+    # So we treat encryption=none alone as potentially insecure
+    if 'encryption=none' in config_lower and ('security=tls' not in config_lower and 'security=reality' not in config_lower):
         return True
 
     # Check for insecure settings in vmess base64 JSON configuration
@@ -181,6 +195,109 @@ def has_insecure_setting(config_line: str) -> bool:
                 # Also check for security=none in vmess config
                 security_setting = j.get('scy') or j.get('security')
                 if security_setting and str(security_setting).lower() == 'none':
+                    return True
+                # Check for legacy VMess mode (alterId > 0 indicates vulnerable legacy mode)
+                alter_id = j.get('aid') or j.get('alterId')
+                if alter_id is not None:
+                    alter_id_value = int(alter_id) if isinstance(alter_id, (int, str)) else 0
+                    if alter_id_value > 0:
+                        return True  # Legacy VMess mode with MD5 header authentication is insecure
+        except Exception:
+            pass
+
+    # Check for insecure Shadowsocks methods
+    if config_line.startswith("ss://"):
+        try:
+            # Parse the Shadowsocks URL to extract method
+            # Format: ss://method:password@host:port
+            # Or: ss://base64(method:password)@host:port
+            ss_part = config_line[5:]  # Remove "ss://"
+
+            # Check if the format is method:password@host:port (non-base64)
+            if ':' in ss_part and '@' in ss_part and ss_part.index(':') < ss_part.index('@'):
+                # Format is method:password@host:port
+                method = ss_part.split(':')[0].lower()
+
+                # Check for weak encryption methods
+                weak_methods = [
+                    'rc4-md5', 'rc4-md5-6', 'aes-128-cfb', 'aes-192-cfb', 'aes-256-cfb',
+                    'aes-128-cfb8', 'aes-192-cfb8', 'aes-256-cfb8', 'aes-128-cfb1',
+                    'aes-192-cfb1', 'aes-256-cfb1', 'aes-128-cfb-fast', 'aes-192-cfb-fast',
+                    'aes-256-cfb-fast', 'aes-128-cfb-simple', 'aes-192-cfb-simple',
+                    'aes-256-cfb-simple', 'aes-128-ctr', 'aes-192-ctr', 'aes-256-ctr',
+                    'bf-cfb', 'camellia-128-cfb', 'camellia-192-cfb', 'camellia-256-cfb',
+                    'cast5-cfb', 'des-cfb', 'idea-cfb', 'rc2-cfb', 'seed-cfb',
+                    'salsa20', 'chacha20', 'xsalsa20', 'xchacha20'
+                ]
+
+                if method in weak_methods:
+                    return True
+            else:
+                # Contains credentials in base64 format: ss://base64(method:password)@host:port
+                if '@' in ss_part:
+                    # Contains credentials, method is in base64 part before '@'
+                    encoded_part = ss_part.split('@')[0]
+
+                    # Handle padding for base64 decoding
+                    rem = len(encoded_part) % 4
+                    if rem:
+                        padded_encoded_part = encoded_part + '=' * (4 - rem)
+                    else:
+                        padded_encoded_part = encoded_part
+
+                    try:
+                        decoded_credentials = base64.b64decode(padded_encoded_part).decode('utf-8')
+                        method = decoded_credentials.split(':')[0].lower()
+
+                        # Check for weak encryption methods
+                        weak_methods = [
+                            'rc4-md5', 'rc4-md5-6', 'aes-128-cfb', 'aes-192-cfb', 'aes-256-cfb',
+                            'aes-128-cfb8', 'aes-192-cfb8', 'aes-256-cfb8', 'aes-128-cfb1',
+                            'aes-192-cfb1', 'aes-256-cfb1', 'aes-128-cfb-fast', 'aes-192-cfb-fast',
+                            'aes-256-cfb-fast', 'aes-128-cfb-simple', 'aes-192-cfb-simple',
+                            'aes-256-cfb-simple', 'aes-128-ctr', 'aes-192-ctr', 'aes-256-ctr',
+                            'bf-cfb', 'camellia-128-cfb', 'camellia-192-cfb', 'camellia-256-cfb',
+                            'cast5-cfb', 'des-cfb', 'idea-cfb', 'rc2-cfb', 'seed-cfb',
+                            'salsa20', 'chacha20', 'xsalsa20', 'xchacha20'
+                        ]
+
+                        if method in weak_methods:
+                            return True
+
+                    except Exception:
+                        # If we can't decode, continue with other checks
+                        pass
+        except Exception:
+            pass
+
+    # Check for insecure ShadowsocksR methods
+    if config_line.startswith("ssr://"):
+        try:
+            # SSR URL format: ssr://base64(host:port:protocol:method:obfs:base64pass/?params)
+            payload = config_line[6:]
+            rem = len(payload) % 4
+            if rem:
+                payload += '=' * (4 - rem)
+            decoded = base64.b64decode(payload).decode('utf-8')
+
+            # Parse the decoded string: host:port:protocol:method:obfs:base64(password)
+            parts = decoded.split(':')
+            if len(parts) >= 6:
+                method = parts[3].lower()
+
+                # Check for weak encryption methods
+                weak_methods = [
+                    'rc4-md5', 'rc4-md5-6', 'aes-128-cfb', 'aes-192-cfb', 'aes-256-cfb',
+                    'aes-128-cfb8', 'aes-192-cfb8', 'aes-256-cfb8', 'aes-128-cfb1',
+                    'aes-192-cfb1', 'aes-256-cfb1', 'aes-128-cfb-fast', 'aes-192-cfb-fast',
+                    'aes-256-cfb-fast', 'aes-128-cfb-simple', 'aes-192-cfb-simple',
+                    'aes-256-cfb-simple', 'aes-128-ctr', 'aes-192-ctr', 'aes-256-ctr',
+                    'bf-cfb', 'camellia-128-cfb', 'camellia-192-cfb', 'camellia-256-cfb',
+                    'cast5-cfb', 'des-cfb', 'idea-cfb', 'rc2-cfb', 'seed-cfb',
+                    'salsa20', 'chacha20', 'xsalsa20', 'xchacha20'
+                ]
+
+                if method in weak_methods:
                     return True
         except Exception:
             pass
