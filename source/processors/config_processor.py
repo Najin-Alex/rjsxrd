@@ -10,7 +10,7 @@ import math
 # Add the source directory to the path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__)))
 
-from config.settings import URLS, URLS_BASE64, URLS_YAML, EXTRA_URLS_FOR_BYPASS, DEFAULT_MAX_WORKERS
+from config.settings import URLS, URLS_BASE64, URLS_YAML, EXTRA_URLS_FOR_BYPASS, MANUAL_SERVERS, DEFAULT_MAX_WORKERS
 from fetchers.fetcher import fetch_data, build_session
 from fetchers.daily_repo_fetcher import fetch_configs_from_daily_repo
 from utils.file_utils import save_to_local_file, load_from_local_file, split_config_file, deduplicate_configs, prepare_config_content, filter_secure_configs, has_insecure_setting, apply_sni_cidr_filter
@@ -111,6 +111,14 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
         log(f"Downloaded {len(daily_configs)} configs from daily-updated repository")
     except Exception as e:
         log(f"Error downloading from daily-updated repository: {str(e)[:200]}...")
+
+    # Add manual servers from servers.txt (these should be added to numbered configs after daily configs)
+    if MANUAL_SERVERS:
+        manual_configs = prepare_config_content("\n".join(MANUAL_SERVERS))
+        all_configs.extend(manual_configs)
+        extra_bypass_configs.extend(manual_configs)  # Also add to bypass configs for SNI/CIDR filtering
+        numbered_configs.append(manual_configs)  # Add to numbered configs after daily configs
+        log(f"Added {len(manual_configs)} manual configs from servers.txt")
 
     return all_configs, extra_bypass_configs, numbered_configs
 

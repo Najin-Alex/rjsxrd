@@ -35,7 +35,10 @@ EXTRA_URLS_FOR_BYPASS = [
     "https://sub.luxusvpn.app/KYyB3aWnYmGx7hRN",
     "https://sub.wetruth.workers.dev/",
     "https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/main/configs/russia_whitelist.txt",
-    "https://bp.wl.free.nf/confs/selected.txt"
+    "https://bp.wl.free.nf/confs/selected.txt",
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
+    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
 ]
 
 # Base64-encoded subscription URLs
@@ -55,6 +58,15 @@ try:
 except FileNotFoundError:
     print("URLS_yaml.txt file not found!")
     URLS_YAML = []  # Fallback to empty list
+
+# Manual server configs from servers.txt
+MANUAL_SERVERS = []
+try:
+    with open(os.path.join(os.path.dirname(__file__), 'servers.txt'), 'r', encoding='utf-8') as f:
+        MANUAL_SERVERS = [line.strip() for line in f if line.strip()]
+except FileNotFoundError:
+    print("servers.txt file not found!")
+    MANUAL_SERVERS = []  # Fallback to empty list
 
 # SNI domains for filtering - Russian white-list bypass
 def load_sni_domains():

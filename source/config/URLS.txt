@@ -131,3 +131,7 @@ https://storage.yandexcloud.net/cid-vpn/whitelist.txt
 https://raw.githubusercontent.com/STR97/STRUGOV/refs/heads/main/CUSTOM
 https://bp.wl.free.nf/confs/wl.txt
 https://bp.wl.free.nf/confs/merged.txt
+https://raw.githubusercontent.com/ShatakVPN/ConfigForge-V2Ray/main/configs/all.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS%2BAll_RUS.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
+https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt
