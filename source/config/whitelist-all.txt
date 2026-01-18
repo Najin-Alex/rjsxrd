@@ -167,6 +167,7 @@ api.plus.kinopoisk.ru
 api.predict.mail.ru
 api.reviews.2gis.com
 api.s3.yandex.net
+api.security.max.ru
 api.speedload.ru
 api.tau.vk.ru
 api.tinkoff.ru
@@ -560,6 +561,7 @@ oauth.tau.vk.ru
 oauth2.cs7777.vk.ru
 octavius.mail.ru
 ok.ru
+one-piece.com
 oneclick-payment.kinopoisk.ru
 online.sberbank.ru
 operator.mail.ru

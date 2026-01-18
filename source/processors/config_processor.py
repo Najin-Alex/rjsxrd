@@ -159,28 +159,29 @@ def create_secure_configs_file(all_configs: List[str], output_dir: str = "../git
 def split_configs_to_files(configs: List[str], output_dir: str, filename_prefix: str, max_configs_per_file: int = 300) -> List[str]:
     """Splits configs into multiple files with a given prefix."""
     created_files = []
-    
+
     num_configs = len(configs)
     if not num_configs:
         return []
 
     # Calculate the number of files needed, rounding up
     num_files = math.ceil(num_configs / max_configs_per_file)
-    
+    log(f"Number of configs: {num_configs}, Max configs per file: {max_configs_per_file}, Calculated number of files: {num_files}")
+
     for i in range(int(num_files)):
         start = i * max_configs_per_file
         end = start + max_configs_per_file
         chunk = configs[start:end]
-        
+
         filename = f"{output_dir}/{filename_prefix}-{i + 1}.txt"
         try:
             with open(filename, "w", encoding="utf-8") as f:
                 f.write("\n".join(chunk))
-            log(f"Created {filename} with {len(chunk)} configs")
+            log(f"Created {filename} with {len(chunk)} configs (indexes {start} to {min(end-1, len(configs)-1)})")
             created_files.append(filename)
         except Exception as e:
             log(f"Error creating {filename}: {e}")
-            
+
     return created_files
 
 
@@ -313,6 +314,7 @@ def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, 
 
     # Step 6: Split bypass configs into multiple files
     log("Splitting bypass configs into multiple files...")
+    log(f"Total unique bypass configs: {len(unique_bypass_configs)}")
     bypass_files = split_configs_to_files(unique_bypass_configs, f"{output_dir}/bypass", "bypass")
 
     # Step 7: Create bypass-unsecure-all.txt file (SNI/CIDR bypass configs including insecure)
@@ -335,6 +337,7 @@ def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, 
 
     # Step 8: Split bypass-unsecure configs into multiple files
     log("Splitting bypass-unsecure configs into multiple files...")
+    log(f"Total unique bypass unsecure configs: {len(unique_bypass_unsecure_configs)}")
     bypass_unsecure_files = split_configs_to_files(unique_bypass_unsecure_configs, f"{output_dir}/bypass-unsecure", "bypass-unsecure")
 
     # Step 9: Create protocol-specific files

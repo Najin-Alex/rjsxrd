@@ -221,6 +221,8 @@ Linux - linux-amd64.zip
 
 Можно использовать **«nekoray»** - [Ссылка](https://github.com/MatsuriDayo/nekoray/releases)
 
+Можно использовать **«v2rayN»** - [Ссылка](https://github.com/2dust/v2rayN/releases)
+
 **2.** Копируем в буфер обмена ссылку на конфиг из раздела [Конфигурации](#конфигурации)
 
 **3.** Нажимаем на **«Профили»**, а затем **«Добавить профиль из буфера обмена»**.
@@ -292,6 +294,8 @@ Linux - linux-amd64.zip
 <summary>Гайд для MacOS</summary>
 
 **1.** Скачиваем **«Hiddify»** - [Ссылка](https://github.com/hiddify/hiddify-app/releases/latest/download/Hiddify-MacOS.dmg)
+
+Можно использовать **«v2rayN»** - [Ссылка](https://github.com/2dust/v2rayN/releases)
 
 **2.** Нажимаем **«Новый профиль»**.
 
