@@ -40,6 +40,7 @@ EXTRA_URLS_FOR_BYPASS = [
     "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-checked.txt",
     "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-SNI-RU-all.txt",
     "https://wlr.s3-website.cloud.ru/zNhbYZtBc",
+    "https://raw.githubusercontent.com/DarkFirexs/Whitelist-bypass_VPN/refs/heads/main/Whitelist%20%7C%20VPN"
 ]
 
 # Base64-encoded subscription URLs

@@ -136,3 +136,6 @@ https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS.txt
 https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_VLESS_RUS_mobile.txt
 https://gist.githubusercontent.com/Gamesaix/0ff0282c8e1298bd282432146db0e997/raw/c334935f34f626307b79a794d3f18fe1584e7d74/United%2520States
+https://raw.githubusercontent.com/koteey/Ms.Kerosin-VPN/refs/heads/main/proxies.txt
+https://raw.githubusercontent.com/koteey/Mr.Kerosin-VPN/refs/heads/main/proxies.txt
+https://raw.githubusercontent.com/koteey/Mr.Kerosin-VPN/refs/heads/main/work.proxies.txt
