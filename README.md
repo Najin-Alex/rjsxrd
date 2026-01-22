@@ -34,11 +34,23 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 
 ## Содержание
 - [rjsxrd - Автоматически обновляемые VPN-конфиги](#rjsxrd---автоматически-обновляемые-vpn-конфиги)
-- [Быстрый старт](#быстрый-старт)
-- [Видео гайд](#видео-гайд)
-- [Конфигурации](#конфигурации)
-- [Установка и использование](#установка-и-использование)
-- [Дополнительно](#дополнительно)
+  - [Особенности](#особенности)
+  - [Содержание](#содержание)
+  - [Быстрый старт](#быстрый-старт)
+  - [Видео гайд](#видео-гайд)
+  - [Конфигурации](#конфигурации)
+    - [Обычные конфиги (default/)](#обычные-конфиги-default)
+      - [Дополнительные файлы в default/](#дополнительные-файлы-в-default)
+    - [Конфиги для обхода SNI/CIDR белых списков (bypass/)](#конфиги-для-обхода-snicidr-белых-списков-bypass)
+    - [Небезопасные конфиги для обхода SNI/CIDR (bypass-unsecure/)](#небезопасные-конфиги-для-обхода-snicidr-bypass-unsecure)
+    - [Конфиги, разделенные по протоколам (split-by-protocols/)](#конфиги-разделенные-по-протоколам-split-by-protocols)
+  - [Установка и использование](#установка-и-использование)
+  - [Дополнительно](#дополнительно)
+    - [Структура репозитория](#структура-репозитория)
+    - [Локальный запуск генератора](#локальный-запуск-генератора)
+    - [Лицензия](#лицензия)
+    - [Источники и вдохновение](#источники-и-вдохновение)
+    - [ДИСКЛЕЙМЕР](#дисклеймер)
 
 ## Быстрый старт
 
@@ -90,7 +102,10 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 - **[bypass-4](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-4.txt)**
 - **[bypass-5](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-5.txt)**
 - **[bypass-6](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-6.txt)**
-- и т.д.
+- **[bypass-7](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-7.txt)**
+- **[bypass-8](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-8.txt)**
+- **[bypass-9](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-9.txt)**
+- **[bypass-10](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass/bypass-10.txt)**
 
 ### Небезопасные конфиги для обхода SNI/CIDR (bypass-unsecure/)
 
@@ -103,7 +118,12 @@ tgc: [t.me/rjsxrd](https://t.me/rjsxrd)
 - **[bypass-unsecure-4](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-4.txt)**
 - **[bypass-unsecure-5](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-5.txt)**
 - **[bypass-unsecure-6](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-6.txt)**
-- и т.д.
+- **[bypass-unsecure-7](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-7.txt)**
+- **[bypass-unsecure-8](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-8.txt)**
+- **[bypass-unsecure-9](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-9.txt)**
+- **[bypass-unsecure-10](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-10.txt)**
+- **[bypass-unsecure-11](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-11.txt)**
+- **[bypass-unsecure-12](https://raw.githubusercontent.com/whoahaow/rjsxrd/refs/heads/main/githubmirror/bypass-unsecure/bypass-unsecure-12.txt)**
 
 ### Конфиги, разделенные по протоколам (split-by-protocols/)
 

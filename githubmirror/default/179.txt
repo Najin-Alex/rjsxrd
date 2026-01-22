@@ -1,70 +1,9 @@
-vless://e4824193-4f54-453b-d037-88368e85ef0e@185.236.232.189:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-1
-vless://f788e136-b245-4617-9d41-b505c7f41ef9@deu196.unboundaccess.org:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-2
-vless://e4824193-4f54-453b-d037-88368e85ef0e@185.236.232.223:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-3
-vless://e999db7a-1b17-4da6-bc37-c9fa24af2e93@104.26.6.89:8443?type=ws&security=tls&sni=YjF03nNq0B.sOlEnTrAa.InFo#🌍 ASTRACAT-Tunels-4
-vless://1a6fe500-59da-4598-8576-256f06765ffb@212.41.11.152:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-5
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@45.140.147.74:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-6
-vless://e999db7a-1b17-4da6-bc37-c9fa24af2e93@ipw.gfdv54cvghhgfhgj-njhgj64.info:443?type=ws&security=tls&sni=M84tG1gGw0.SoLeNtRaA.iNfO#🌍 ASTRACAT-Tunels-7
-vless://060a8fe8-7175-4ded-94a5-d9808bc645b6@104.18.35.85:443?type=ws&security=tls&sni=cf.vless.sandesh.fr#🌍 ASTRACAT-Tunels-8
-vless://b3138f88-8845-41f7-8250-6eaa30be0110@nodc.bazarkha.sbs:6003?type=tcp&security=none#🌍 ASTRACAT-Tunels-9
-vless://ad069756-c14b-4443-87af-4a503c5c08f5@m33a.vip784.com:33801?type=tcp&security=none#🌍 ASTRACAT-Tunels-10
-vless://0261c8f9-413a-455b-942b-3713c6b0084a@172.66.40.99:443?type=ws&security=tls&sni=www.dollardoon.com#🌍 ASTRACAT-Tunels-11
-vless://13c10b21-6211-4d43-856f-2e54ef2ac2e2@m7a.vip784.com:33801?type=tcp&security=none#🌍 ASTRACAT-Tunels-12
-vless://4bb35928-40bb-4bf3-95f1-9efdc4169147@159.223.209.139:46964?type=tcp&security=none#🌍 ASTRACAT-Tunels-13
-vless://3e3cec72-9eb4-4aa2-834d-b3c641ef1e6d@165.22.200.45:45323?type=tcp&security=none#🌍 ASTRACAT-Tunels-14
-vless://bm.boulvarmoein.shop@bm.boulvarmoein.shop:2095?type=ws&security=tls&sni=bm.boulvarmoein.shop#🌍 ASTRACAT-Tunels-15
-vless://895a39fb-6c32-49af-b04d-efecc1f6c5fb@206.189.135.13:41856?type=tcp&security=none#🌍 ASTRACAT-Tunels-16
-vless://976191fd-e929-467e-98b4-1349f58907d5@139.59.46.188:37548?type=tcp&security=none#🌍 ASTRACAT-Tunels-17
-vless://0cc731b9-0375-4590-aeaa-7e2611a149fe@104.21.36.57:443?type=ws&security=tls&sni=black.fullmargintraders.com#🌍 ASTRACAT-Tunels-18
-vless://5661d93b-d932-4afa-97d1-c2ac455644d3@139.59.58.120:31855?type=tcp&security=none#🌍 ASTRACAT-Tunels-19
-vless://dda40179-f8b0-44a1-9926-bb64e7a767a7@170.64.154.27:20651?type=tcp&security=none#🌍 ASTRACAT-Tunels-20
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638928668169310838.rasht-drc-tusabp.info:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-21
-vless://d2d42f0d-5090-4901-bb7d-8ce85cfb8142@192.142.53.38:16529?type=tcp&security=none#🌍 ASTRACAT-Tunels-22
-vless://e4824193-4f54-453b-d037-88368e85ef0e@45.82.251.114:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-23
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@195.42.233.125:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-24
-vless://1lpxy6haqm@45.15.167.13:443?type=tcp&security=tls#🌍 ASTRACAT-Tunels-25
-vless://5a12794b-2125-46d7-a748-927a989faa04@narrow-passenger.oneeat.co:80?type=ws&security=none#🌍 ASTRACAT-Tunels-26
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638929396024910159.lisbon-drc-dcrabj.info:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-27
-vless://05020a61-3c0c-4ead-b256-7851ff905a75@sweeT-coMBInATIOn.SeOtooLsFORyOU.co.Uk:80?type=ws&security=none#🌍 ASTRACAT-Tunels-28
-vless://481c5606-b586-44d7-bc2e-d8ef30d67f62@kz.accesspoints.cloakify.app:38339?type=tcp&security=none#🌍 ASTRACAT-Tunels-29
-vless://919526f8-86c8-4f43-b5f7-91eea1368bad@141.227.178.165:25365?type=grpc&security=none#🌍 ASTRACAT-Tunels-30
-vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@ovhwuxian.pai50288.uk:8443?type=ws&security=tls&sni=ovhwuxian.pai50288.uk#🌍 ASTRACAT-Tunels-31
-vless://1lpxy6haqm@1lpxy6haqm-451516713-direct.zamam.co:443?type=tcp&security=tls#🌍 ASTRACAT-Tunels-32
-vless://4914cac8-d4f7-4ffe-9c58-1117c9cb1887@192.142.53.38:37321?type=grpc&security=none#🌍 ASTRACAT-Tunels-33
-vless://6bb4d50a-56f9-47d5-8ce8-d8b7fe9aa474@64.225.9.191:25023?type=tcp&security=none#🌍 ASTRACAT-Tunels-34
-vless://888a20e2-fc3f-4f52-973c-36a6386225b8@89.44.242.222:29500?type=tcp&security=none#🌍 ASTRACAT-Tunels-35
-vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@104.21.3.219:8443?type=ws&security=tls&sni=ovhwuxian.pai50288.uk#🌍 ASTRACAT-Tunels-36
-vless://ff3685d5-f031-46d3-88c0-0b6b0d1f1558@64.227.41.160:57996?type=tcp&security=none#🌍 ASTRACAT-Tunels-37
-vless://1dbfb57c-164e-47c5-9355-8e0c429e7b99@45.82.245.173:80?type=ws&security=none#🌍 ASTRACAT-Tunels-38
-vless://1a6fe500-59da-4598-8576-256f06765ffb@94.26.228.10:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-39
-vless://e4824193-4f54-453b-d037-88368e85ef0e@45.82.251.180:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-40
-vless://a87bf8a2-17a4-3054-b51e-876b5f1d0f24@5.181.171.2:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-41
-vless://a87bf8a2-17a4-3054-b51e-876b5f1d0f24@5.181.171.2:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-42
-vless://08704c01-7edb-454a-98a2-328ccb9936fa@45.88.183.156:12794?type=tcp&security=none#🌍 ASTRACAT-Tunels-43
-vless://14eba471-4623-4ed1-b937-f5b2206749bf@91.99.168.213:443?type=grpc&security=none#🌍 ASTRACAT-Tunels-44
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@638930382260455538.ahvaz-drc-tusabt.info:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-45
-vless://2a2d5f5d-6acb-438f-ba25-f3cbc6614b63@ov-france2.09vpn.com:80?type=ws&security=none#🌍 ASTRACAT-Tunels-46
-vless://b055036a-2d81-4d46-ab18-4e1898b58cec@fearless-change.oneeat.co:80?type=ws&security=none#🌍 ASTRACAT-Tunels-47
-vless://ad069756-c14b-4443-87af-4a503c5c08f5@m33a.vip784.com:33801?type=tcp&security=none#🌍 ASTRACAT-Tunels-48
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.99:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-49
-vless://e4824193-4f54-453b-d037-88368e85ef0e@185.236.232.223:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-50
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@hybrid.arvancloud.online:44443?type=tcp&security=none#🌍 ASTRACAT-Tunels-51
-vless://53fff6cc-b4ec-43e8-ade5-e0c42972fc33@193.151.135.21:44443?type=tcp&security=none#🌍 ASTRACAT-Tunels-52
-vless://b3138f88-8845-41f7-8250-6eaa30be0110@nodc.bazarkha.sbs:6003?type=tcp&security=none#🌍 ASTRACAT-Tunels-53
-vless://e4824193-4f54-453b-d037-88368e85ef0e@public18v7.fastipsport.com:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-54
-vless://14eba471-4623-4ed1-b937-f5b2206749bf@magazine.sentry-warrunner.xyz:443?type=grpc&security=none#🌍 ASTRACAT-Tunels-55
-vless://e4824193-4f54-453b-d037-88368e85ef0e@pqh27v4.waipdirect.shop:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-56
-vless://44cb3f8c-57a4-4f2b-a0ae-d9121e54a598@ir.fxgoldensignals.com:54567?type=ws&security=none#🌍 ASTRACAT-Tunels-57
-vless://e999db7a-1b17-4da6-bc37-c9fa24af2e93@ipw.gfdv54cvghhgfhgj-njhgj64.info:443?type=ws&security=tls&sni=I78nThHk0Q.sOlEnTrAa.InFo#🌍 ASTRACAT-Tunels-58
-vless://57ba2ab1-a283-42eb-82ee-dc3561a805b8@ovhwuxian.pai50288.uk:8443?type=ws&security=tls&sni=ovhwuxian.pai50288.uk#🌍 ASTRACAT-Tunels-59
-vless://6f8923d9-f812-4ca6-b93a-8f9227bf2eab@195.93.253.49:33094?type=tcp&security=none#🌍 ASTRACAT-Tunels-60
-vless://d4e4c02a-d969-47a6-ba0f-3d433fdac206@80.249.131.7:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-61
-vless://e4824193-4f54-453b-d037-88368e85ef0e@185.236.232.123:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-62
-vless://e4824193-4f54-453b-d037-88368e85ef0e@pqh30v8.waipdirect.shop:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-63
-vless://8e6acce9-8b56-7190-d491-7d84f8189e26@5.181.171.2:443?type=tcp&security=none#🌍 ASTRACAT-Tunels-64
-vless://2ad87f95-7a0b-4018-8497-5ecaac2f0ddf@handsome-device.oneeat.co:80?type=ws&security=none#🌍 ASTRACAT-Tunels-65
-vless://df0680ca-e43c-498d-ed86-8e196eedd012@185.231.205.99:8880?type=grpc&security=none#🌍 ASTRACAT-Tunels-66
-vless://b055036a-2d81-4d46-ab18-4e1898b58cec@fearless-change.oneeat.co:80?type=ws&security=none#🌍 ASTRACAT-Tunels-67
-vless://297df885-9161-46cb-94d4-90a8a8489645@45.128.54.17:443?type=ws&security=tls&sni=45.128.54.17#🌍 ASTRACAT-Tunels-68
-vless://481c5606-b586-44d7-bc2e-d8ef30d67f62@176.120.72.63:38339?type=tcp&security=none#🌍 ASTRACAT-Tunels-69
-vless://11111111-2222-1111-1111-111111111111@Everyday-VPN.Telegram-Channel:443?type=grpc&security=tls#🌍 ASTRACAT-Tunels-70
+vless://84ccd309-283a-49e8-b92c-8b9ecdae7f42@zzula.ir:443?path=%2F34.42.77.60%3D443&security=tls&encryption=none&insecure=1&host=cornsilk.qzz.io&type=ws&allowInsecure=1&sni=cornsilk.qzz.io#
+vmess://eyJhZGQiOiI4LjYuMTEyLjAiLCJhaWQiOiIwIiwiYWxwbiI6ImgyLGh0dHAvMS4xIiwiZnAiOiJjaHJvbWUiLCJob3N0IjoiIiwiaWQiOiI4YjIzYTZjOS0wY2E2LTQxMzQtODNmMi0zOWQ0MmRhMGQ2NDgiLCJuZXQiOiJ3cyIsInBhdGgiOiIvIiwicG9ydCI6IjIwNTMiLCJzY3kiOiJhdXRvIiwic25pIjoiYWxpeWVkYXN0Lmd3a2FxcS5sb2wiLCJ0bHMiOiJ0bHMiLCJ0eXBlIjoiLS0tIiwidiI6IjIiLCJwcyI6IkBWMnJheXNDb2xsZWN0b3Ig8J+Ruj3wn5GzIn0=
+vless://827c5131-6703-4930-a75f-b7f6d4c1938f@8.6.112.0:2053?path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=dnsman.atlassmusic.top&fp=chrome&type=ws&allowInsecure=0&sni=dnsman.atlassmusic.top#%F0%9F%90%8B%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%D8%B3%D8%B1%DA%86%20%DA%A9%D9%86%3A%20%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C%20%DA%A9%D8%A7%D9%81%D9%87%7C%20proxy_kafee%40
+vless://d0298536-d670-4045-bbb1-ddd5ea68683e@8.6.112.0:443?allowInsecure=0&encryption=none&fp=chrome&host=a.azadnet003.ddns-ip.net&insecure=0&path=%2Ftelegram-%40v2ray_alpha%3D&security=tls&sni=a.azadnet003.ddns-ip.net&type=ws#%40V2raysCollector%20%F0%9F%8F%B4
+vless://e258977b-e413-4718-a3af-02d75492c349@162.159.152.4:443?path=%2FBuzVpN------BuzVpN-------BuzVpN-------BuzVpN------&security=tls&encryption=none&host=ww23.sgxaniu.qzz.io&fp=chrome&type=ws&sni=ww23.sgxaniu.qzz.io#%D8%A8%D8%B1%D8%A7%DB%8C%20%D8%A7%D8%AA%D8%B5%D8%A7%D9%84%20%D8%AF%D8%A7%D8%A6%D9%85%20%DA%AF%D9%BE%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%D8%B9%D8%B6%D9%88%D8%B4%DB%8C%D8%AF%20proxy_kafee%40
+vless://1a09f2d5-20d6-4cac-f855-807c82e04766@Chatgpt.com:443?path=%2F&security=tls&alpn=h3%2Ch2%2Chttp%2F1.1&encryption=none&insecure=1&host=Emergency.electrov2ray.store&fp=chrome&type=ws&allowInsecure=1&sni=Emergency.electrov2ray.store#%40flyv2ray
+trojan://humanity@chatgpt.com:443?path=%2Fassignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#%40vpnbaz%20%7C%20%D9%86%D8%AA%20%D9%85%D9%84%DB%8C
+vless://7e58699f-1d5d-4f6b-b181-cb74f0ad9509@api.dark-coffe.com:8443?path=%2F&security=tls&encryption=none&insecure=1&host=TjLwH7cTdH.sMaRtTeChZaAl.InFo&type=ws&allowInsecure=1&sni=TjLwH7cTdH.sMaRtTeChZaAl.InFo#[
+vmess://eyJ2IjoiMiIsInBzIjoidC5tZS92MkxpbmUgfCBGcmVlIHwgMzMxMyB8IEdlcm1hbnkiLCJhZGQiOiI1Ny4xMjkuMjQuMTI1IiwicG9ydCI6IjQ0MyIsImlkIjoiMDNmY2M2MTgtYjkzZC02Nzk2LTZhZWQtOGEzOGM5NzVkNTgxIiwiYWlkIjoiMCIsInNjeSI6ImF1dG8iLCJuZXQiOiJ3cyIsInR5cGUiOiJub25lIiwiaG9zdCI6IiIsInBhdGgiOiIvbGlua3Z3cyIsInRscyI6InRscyIsInNuaSI6ImF2ZWlyb3IuY29tIiwiYWxwbiI6IiIsImZwIjoiIn0=
