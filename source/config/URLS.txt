@@ -152,3 +152,9 @@ https://cdn.jsdelivr.net/gh/EtoNeYaProject/EtoNeYaProject.github.io@refs/heads/m
 https://translate.yandex.ru/translate?url=https://etoneya.a9fm.site/1&lang=en-ru
 https://raw.githubusercontent.com/r3zarahimi/tg-v2ray-configs-every2h/main/Config_jo.txt
 https://raw.githubusercontent.com/zokz9/config-vpn/refs/heads/main/config.txt#ZoKzVPN
+https://raw.githubusercontent.com/HikaruApps/WhiteLattice/refs/heads/main/subscriptions/main-sub.txt
+https://subs.root.sx/hdff1
+https://raw.githubusercontent.com/LimeHi/LimeVPN/refs/heads/main/LimeVPN.txt
+https://pastebin.com/raw/5pKVyTTL
+https://raw.githubusercontent.com/avbak/sturdy-octo-tribble1/refs/heads/main/VLESS-RU-MOBILE-CIDR-WHITELIST-filtered.txt
+https://catkts.qzz.io/vpn-service/catvpn/catspeedversion.txt
