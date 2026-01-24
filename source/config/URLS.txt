@@ -139,7 +139,7 @@ https://gist.githubusercontent.com/Gamesaix/0ff0282c8e1298bd282432146db0e997/raw
 https://raw.githubusercontent.com/koteey/Ms.Kerosin-VPN/refs/heads/main/proxies.txt
 https://raw.githubusercontent.com/koteey/Mr.Kerosin-VPN/refs/heads/main/proxies.txt
 https://raw.githubusercontent.com/koteey/Mr.Kerosin-VPN/refs/heads/main/work.proxies.txt
-https://github.com/kismetpro/NodeSuber/raw/refs/heads/main/out/All_Configs_Sub.txt
+https://raw.githubusercontent.com/kismetpro/NodeSuber/refs/heads/main/out/All_Configs_Sub.txt
 https://raw.githubusercontent.com/KiryaScript/white-lists/refs/heads/main/githubmirror/26.txt
 https://raw.githubusercontent.com/KiryaScript/white-lists/refs/heads/main/githubmirror/27.txt
 https://raw.githubusercontent.com/KiryaScript/white-lists/refs/heads/main/githubmirror/28.txt
@@ -158,3 +158,13 @@ https://raw.githubusercontent.com/LimeHi/LimeVPN/refs/heads/main/LimeVPN.txt
 https://pastebin.com/raw/5pKVyTTL
 https://raw.githubusercontent.com/avbak/sturdy-octo-tribble1/refs/heads/main/VLESS-RU-MOBILE-CIDR-WHITELIST-filtered.txt
 https://catkts.qzz.io/vpn-service/catvpn/catspeedversion.txt
+https://raw.githubusercontent.com/FalerChannel/FalerChannel/refs/heads/main/configs
+https://raw.githubusercontent.com/officialdakari/psychic-octo-tribble/refs/heads/main/subwl.txt
+https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/configs
+https://raw.githubusercontent.com/Ai123999/3Wend/refs/heads/main/Notorgames_0
+https://raw.githubusercontent.com/Ai123999/2Tues/refs/heads/main/2Tues_Notorgamers
+https://raw.githubusercontent.com/Ai123999/Notorgames/refs/heads/main/4Thur_Notorgamers
+https://raw.githubusercontent.com/Ai123999/HiddifySubs-Notorgamers/refs/heads/main/4vless_@Notorgamers.txt
+https://raw.githubusercontent.com/Ai123999/WhiteeListSub/refs/heads/main/whitelistkeys
+https://raw.githubusercontent.com/Ai123999/WhiteKeys/refs/heads/main/WhiteKeys
+https://raw.githubusercontent.com/SER38Off/happ-subscription/refs/heads/main/all-servers.txt
