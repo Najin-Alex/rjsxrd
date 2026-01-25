@@ -22,3 +22,4 @@ https://raw.githubusercontent.com/Leon406/SubCrawler/refs/heads/main/sub/share/v
 https://raw.githubusercontent.com/Leon406/SubCrawler/refs/heads/main/sub/share/hysteria2
 https://sub-001.dns-on-fire.net/api/sub/aHtuQxwQ4RsGSJ2L
 http://livpn.atwebpages.com/sub.php?token=c829c20769d2112b
+https://raw.githubusercontent.com/4nba/vpn-free-russia/refs/heads/master/subscription.txt

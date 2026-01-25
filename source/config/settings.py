@@ -41,6 +41,7 @@ EXTRA_URLS_FOR_BYPASS = [
     "https://wlr.s3-website.cloud.ru/zNhbYZtBc",
     "https://raw.githubusercontent.com/DarkFirexs/Whitelist-bypass_VPN/refs/heads/main/Whitelist%20%7C%20VPN",
     "https://nowmeow.pw/8ybBd3fdCAQ6Ew5H0d66Y1hMbh63GpKUtEXQClIu/whitelist",
+    "https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/refs/heads/main/configs/russia_whitelist.txt"
 ]
 
 # Base64-encoded subscription URLs
