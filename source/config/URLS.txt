@@ -161,10 +161,7 @@ https://catkts.qzz.io/vpn-service/catvpn/catspeedversion.txt
 https://raw.githubusercontent.com/FalerChannel/FalerChannel/refs/heads/main/configs
 https://raw.githubusercontent.com/officialdakari/psychic-octo-tribble/refs/heads/main/subwl.txt
 https://raw.githubusercontent.com/RKPchannel/RKP_bypass_configs/refs/heads/main/configs
-https://raw.githubusercontent.com/Ai123999/3Wend/refs/heads/main/Notorgames_0
 https://raw.githubusercontent.com/Ai123999/2Tues/refs/heads/main/2Tues_Notorgamers
-https://raw.githubusercontent.com/Ai123999/Notorgames/refs/heads/main/4Thur_Notorgamers
-https://raw.githubusercontent.com/Ai123999/HiddifySubs-Notorgamers/refs/heads/main/4vless_@Notorgamers.txt
 https://raw.githubusercontent.com/Ai123999/WhiteeListSub/refs/heads/main/whitelistkeys
 https://raw.githubusercontent.com/Ai123999/WhiteKeys/refs/heads/main/WhiteKeys
-https://raw.githubusercontent.com/SER38Off/happ-subscription/refs/heads/main/all-servers.txt
+https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/main/configs/russia_whitelist.txt

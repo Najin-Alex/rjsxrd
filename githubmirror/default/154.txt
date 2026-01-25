@@ -1,1 +1,0 @@
-vless://eaaced8e-56b1-416e-9c79-0a2ae290c951@31.57.29.19:443?type=xhttp&encryption=none&path=%2F&host=ozon.ru&mode=auto&security=reality&pbk=VDCoT3CkhWndsbXhqj_4lftp2Ok7tRFcGOAOVXOqM18&fp=random&sni=ozon.ru&sid=9392&spx=%2F#VDS

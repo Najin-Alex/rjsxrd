@@ -17,11 +17,11 @@ from utils.file_utils import save_to_local_file, load_from_local_file, split_con
 from utils.logger import log
 
 
-def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str], List[str], List[List[str]]]:
-    """Downloads all configs from all sources. Returns (all_configs, extra_bypass_configs, numbered_configs)."""
+def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str], List[str], List[Tuple[List[str], str]]]:
+    """Downloads all configs from all sources. Returns (all_configs, extra_bypass_configs, numbered_configs_with_urls)."""
     all_configs = []
     extra_bypass_configs = []
-    numbered_configs = []  # Will store configs grouped by source for numbered files
+    numbered_configs_with_urls = []  # Will store (configs, url) tuples for numbered files
 
     # Create output directories
     os.makedirs(f"{output_dir}/default", exist_ok=True)
@@ -47,12 +47,12 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
                     # Get the original index to preserve order
                     index = future_to_index[future]
 
-                    # Ensure we have enough slots in numbered_configs list
-                    while len(numbered_configs) <= index:
-                        numbered_configs.append([])
+                    # Ensure we have enough slots in numbered_configs_with_urls list
+                    while len(numbered_configs_with_urls) <= index:
+                        numbered_configs_with_urls.append(([], URLS[index]))
 
                     # Store configs in the correct position
-                    numbered_configs[index].extend(configs)
+                    numbered_configs_with_urls[index][0].extend(configs)
 
                 except Exception as e:
                     log(f"Error downloading from regular URL: {str(e)[:200]}...")
@@ -61,30 +61,33 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
     # These should also be added to numbered configs after URLS configs
     if EXTRA_URLS_FOR_BYPASS:
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(EXTRA_URLS_FOR_BYPASS)))) as executor:
-            futures = [executor.submit(fetch_data, url) for url in EXTRA_URLS_FOR_BYPASS]
-            for future in concurrent.futures.as_completed(futures):
+            future_to_url = {executor.submit(fetch_data, url): url for url in EXTRA_URLS_FOR_BYPASS}
+            for future in concurrent.futures.as_completed(future_to_url):
                 try:
                     content = future.result()
                     configs = prepare_config_content(content)
+                    corresponding_url = future_to_url[future]
+                    
                     extra_bypass_configs.extend(configs)  # Store separately for bypass processing
                     all_configs.extend(configs)  # Also add to all configs
-                    numbered_configs.append(configs)  # Add to numbered configs after URLS
+                    numbered_configs_with_urls.append((configs, corresponding_url))  # Add to numbered configs after URLS
                 except Exception as e:
                     log(f"Error downloading from extra bypass URL: {str(e)[:200]}...")
 
     # Download from base64 URLs (these should be added to numbered configs after extra bypass)
     if URLS_BASE64:
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_BASE64)))) as executor:
-            futures = [executor.submit(fetch_data, url) for url in URLS_BASE64]
-            for future in concurrent.futures.as_completed(futures):
+            future_to_url = {executor.submit(fetch_data, url): url for url in URLS_BASE64}
+            for future in concurrent.futures.as_completed(future_to_url):
                 try:
                     content = future.result()
                     # Decode base64 content
                     decoded_bytes = base64.b64decode(content.strip())
                     decoded_content = decoded_bytes.decode('utf-8')
                     configs = prepare_config_content(decoded_content)
+                    corresponding_url = future_to_url[future]
                     all_configs.extend(configs)
-                    numbered_configs.append(configs)  # Add to numbered configs after extra bypass
+                    numbered_configs_with_urls.append((configs, corresponding_url))  # Add to numbered configs after extra bypass
                 except Exception as e:
                     log(f"Error downloading from base64 URL: {str(e)[:200]}...")
 
@@ -92,14 +95,15 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
     if URLS_YAML:
         from fetchers.yaml_converter import convert_yaml_to_vpn_configs
         with concurrent.futures.ThreadPoolExecutor(max_workers=min(DEFAULT_MAX_WORKERS, max(1, len(URLS_YAML)))) as executor:
-            futures = [executor.submit(fetch_data, url) for url in URLS_YAML]
-            for future in concurrent.futures.as_completed(futures):
+            future_to_url = {executor.submit(fetch_data, url): url for url in URLS_YAML}
+            for future in concurrent.futures.as_completed(future_to_url):
                 try:
                     yaml_content = future.result()
                     vpn_configs = convert_yaml_to_vpn_configs(yaml_content)
+                    corresponding_url = future_to_url[future]
                     if vpn_configs:
                         all_configs.extend(vpn_configs)
-                        numbered_configs.append(vpn_configs)  # Add to numbered configs after base64
+                        numbered_configs_with_urls.append((vpn_configs, corresponding_url))  # Add to numbered configs after base64
                 except Exception as e:
                     log(f"Error downloading or converting YAML: {str(e)[:200]}...")
 
@@ -107,7 +111,7 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
     try:
         daily_configs = fetch_configs_from_daily_repo()
         all_configs.extend(daily_configs)
-        numbered_configs.append(daily_configs)  # Add to numbered configs after YAML
+        numbered_configs_with_urls.append((daily_configs, "DAILY_REPO"))  # Add to numbered configs after YAML
         log(f"Downloaded {len(daily_configs)} configs from daily-updated repository")
     except Exception as e:
         log(f"Error downloading from daily-updated repository: {str(e)[:200]}...")
@@ -117,10 +121,10 @@ def download_all_configs(output_dir: str = "../githubmirror") -> Tuple[List[str]
         manual_configs = prepare_config_content("\n".join(MANUAL_SERVERS))
         all_configs.extend(manual_configs)
         extra_bypass_configs.extend(manual_configs)  # Also add to bypass configs for SNI/CIDR filtering
-        numbered_configs.append(manual_configs)  # Add to numbered configs after daily configs
+        numbered_configs_with_urls.append((manual_configs, "MANUAL_SERVERS"))  # Add to numbered configs after daily configs
         log(f"Added {len(manual_configs)} manual configs from servers.txt")
 
-    return all_configs, extra_bypass_configs, numbered_configs
+    return all_configs, extra_bypass_configs, numbered_configs_with_urls
 
 
 def create_all_configs_file(all_configs: List[str], output_dir: str = "../githubmirror") -> str:
@@ -254,11 +258,11 @@ def create_protocol_split_files(all_configs: List[str], output_dir: str = "../gi
     return file_pairs
 
 
-def create_numbered_default_files(numbered_configs: List[List[str]], output_dir: str = "../githubmirror") -> List[str]:
+def create_numbered_default_files(numbered_configs_with_urls: List[Tuple[List[str], str]], output_dir: str = "../githubmirror") -> List[str]:
     """Creates numbered files (1.txt, 2.txt, etc.) in the default directory based on URL order."""
     created_files = []
 
-    for i, configs in enumerate(numbered_configs):
+    for i, (configs, source_url) in enumerate(numbered_configs_with_urls):
         if configs:  # Only create file if there are configs for this source
             filename = f"{i + 1}.txt"
             filepath = os.path.join(f"{output_dir}/default", filename)
@@ -266,7 +270,7 @@ def create_numbered_default_files(numbered_configs: List[List[str]], output_dir:
             try:
                 with open(filepath, "w", encoding="utf-8") as f:
                     f.write("\n".join(configs))
-                log(f"Created numbered file {filepath} with {len(configs)} configs")
+                log(f"Created numbered file {filepath} with {len(configs)} configs from source: {source_url}")
                 created_files.append(filepath)
             except Exception as e:
                 log(f"Error creating numbered file {filepath}: {e}")
@@ -278,12 +282,12 @@ def process_all_configs(output_dir: str = "../githubmirror") -> List[Tuple[str, 
     """Main processing function that orchestrates the entire config generation process."""
     # Step 1: Download all configs from all sources
     log("Downloading all configs from all sources...")
-    all_configs, extra_bypass_configs, numbered_configs = download_all_configs(output_dir)
-    log(f"Downloaded {len(all_configs)} total configs, {len(extra_bypass_configs)} extra bypass configs, and {len(numbered_configs)} sources for numbered files")
+    all_configs, extra_bypass_configs, numbered_configs_with_urls = download_all_configs(output_dir)
+    log(f"Downloaded {len(all_configs)} total configs, {len(extra_bypass_configs)} extra bypass configs, and {len(numbered_configs_with_urls)} sources for numbered files")
 
     # Step 2: Create numbered default files (1.txt, 2.txt, etc.) based on URL order
     log("Creating numbered default files...")
-    numbered_default_files = create_numbered_default_files(numbered_configs, output_dir)
+    numbered_default_files = create_numbered_default_files(numbered_configs_with_urls, output_dir)
 
     # Step 3: Create all.txt file (all unique configs)
     log("Creating all.txt file...")

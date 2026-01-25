@@ -1,10 +1,9 @@
 trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&headerType=none&type=tcp&sni=www.semanticstaplegun.click#%40Kia_Net%20%F0%9F%A4%A5
 trojan://humanity@chatgpt.com:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#%E2%98%84%EF%B8%8F%40netshekan99%20%7C%20%D9%85%D9%84%DB%8C%20%D8%B4%DA%A9%D9%86%2028%20%D8%AF%DB%8C%20%E2%98%84%EF%B8%8F`
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&host=www.multiplydose.com&fp=chrome&type=ws&sni=www.multiplydose.com#⚡Telegram
-trojan://98edcf90-4337-47e3-b389-7923f67aefc7@green2.cdntencentmusic.com:35502?allowInsecure=1&sni=green2.cdntencentmusic.com#%F0%9F%87%A8%F0%9F%87%B3%20%E5%8F%B0%E6%B9%BE%E7%9C%81%E5%8F%B0%E4%B8%AD%E5%B8%82%20%E4%B8%AD%E5%8D%8E%E7%94%B5%E4%BF%A1
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?allowInsecure=1&sni=www.semanticstaplegun.click#%F0%9F%87%AA%F0%9F%87%B8%20%E8%A5%BF%E7%8F%AD%E7%89%99%20V2CROSS.COM
-trojan://09007daa-a345-4ec2-b3e8-37068855f877@green2.cdntencentmusic.com:31103?allowInsecure=1&sni=green2.cdntencentmusic.com#%F0%9F%87%A8%F0%9F%87%B3%20%E5%8F%B0%E6%B9%BE%E7%9C%81%E5%8F%B0%E4%B8%AD%E5%B8%82%20%E4%B8%AD%E5%8D%8E%E7%94%B5%E4%BF%A1
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?allowInsecure=0&sni=www.semanticstaplegun.click#%F0%9F%87%AA%F0%9F%87%B8%20%E8%A5%BF%E7%8F%AD%E7%89%99%20V2CROSS.COM
+trojan://655a3e72-788e-41c1-8c23-6032490c64a0@green2.cdntencentmusic.com:31101?allowInsecure=1&sni=green2.cdntencentmusic.com#%F0%9F%87%A8%F0%9F%87%B3%20%E5%8F%B0%E6%B9%BE%E7%9C%81%E5%8F%B0%E4%B8%AD%E5%B8%82%20%E4%B8%AD%E5%8D%8E%E7%94%B5%E4%BF%A1
+trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.172:10889?allowInsecure=0&sni=web.max.ru#%F0%9F%87%A8%F0%9F%87%A6%20%E5%8A%A0%E6%8B%BF%E5%A4%A7%20V2CROSS.COM
+trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?allowInsecure=0&sni=ads.x5.ru#%F0%9F%87%A9%F0%9F%87%AA%20%E5%BE%B7%E5%9B%BD%20%E9%BB%91%E6%A3%AE%E5%B7%9E%E6%B3%95%E5%85%B0%E5%85%8B%E7%A6%8FChoopa%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83
 trojan://869e9086806483ca4744a4cb0f3d6e16@58.152.18.124:443?allowInsecure=0&sni=www.nintendogames.net#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF3%7C%40ripaojiedian
 trojan://BxceQaOe@16.162.90.147:432?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF4%7C%40ripaojiedian
 trojan://BxceQaOe@219.76.135.98:443?allowInsecure=1&sni=t.me%2Fripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20%E9%A6%99%E6%B8%AF5%7C%40ripaojiedian
@@ -50,19 +49,14 @@ trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.228:10889?security=tls&sni=web
 trojan://cTv.9PDdCt-wybBrG1qlxI5UJuaEj@167.17.185.228:10889?security=tls&sni=web.max&allowInsecure=1&type=tcp&headerType=none#t.me/v2Line | Free | 3236 | Iceland
 trojan://RPyW62_b9aH.ztJKeArou@83.143.87.9:18581/?type=tcp&security=tls&allowInsecure=1#%E2%9C%8598%40oneclickvpnkeys
 trojan://Szb%3D-Zguo53QhmivcJqEAWtpdPX6Y@45.63.40.126:13345/?type=tcp&security=tls&sni=ads.x5.ru&allowInsecure=1#%F0%9F%9A%A82%40oneclickvpnkeys
-trojan://)5,9FW.Kk166@irancell.buzzmuzzpanel.online:443?security=tls&sni=028.eLECtRocEllco-Cf-028.worKErS.dev&fp=chrome&alpn=http/1.1&insecure=0&allowInsecure=0&type=ws&host=028.electrocellco-cf-028.workers.dev&path=/eyJqdW5rIjoiU2oxczB0b0tSIiwicHJvdG9jb2wiOiJ0ciIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560#[83460] - Telegram : @V2All
 trojan://019a8c1f-3d28-74e8-8a8e-40045d7ec77f@38.207.160.35:443/?type=tcp&security=tls&sni=www.bilibili.com&allowInsecure=1#🇭🇰 HK
-trojan://09007daa-a345-4ec2-b3e8-37068855f877@green2.cdntencentmusic.com:31103?sni=green2.cdntencentmusic.com&path=/#[83463] - Telegram : @V2All
-trojan://0b78da11-9e69-4bd6-a95f-27ca81c43d0d@xiaozhu1.kkieo555.cn:41275?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#@Freev2rng
 trojan://13e71ddb-908c-45e0-993c-da482d848c88@seashell.qzz.io:443?path=/156.254.114.120:30011&security=tls&host=seashell.qzz.io&type=ws&sni=seashell.qzz.io#telegram » 𝗺𝗮𝗶𝗻𝘃𝟮𝗿𝗮𝘆
 trojan://3d24de45-e38a-49c2-a963-ba8271c62d2b@tronblue.qzz.io:443?path=/152.32.255.24:587&security=tls&host=tronblue.qzz.io&type=ws&sni=tronblue.qzz.io#telegram » 𝗺𝗮𝗶𝗻𝘃𝟮𝗿𝗮𝘆
 trojan://59a62e95-6262-4ba1-8027-c642b7c72713@green2.cdntencentmusic.com:31101/?type=tcp&security=tls&sni=green2.cdntencentmusic.com#🇭🇰 香港
-trojan://7bdf5985-65ff-4f56-935a-2ff73cf4bf11@xiaozhu1.kkieo555.cn:41277?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#@Freev2rng
-trojan://7bdf5985-65ff-4f56-935a-2ff73cf4bf11@xiaozhu1.kkieo555.cn:41277?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#✅سرورها بیشتردرکانال:prrofile_purple@✅
 trojan://89str_hbFiA4Re5VKxLYnDPgy@149.248.50.17:15349?security=tls&host=telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray,telegram-@mainv2ray&headerType=none&type=tcp&sni=ya.ru#telegram » 𝗺𝗮𝗶𝗻𝘃𝟮𝗿𝗮𝘆
-trojan://A4u^p(_UR*F6@irancell.buzzmuzzpanel.online:443?security=tls&sni=027.eLECTROcelLCO-cf-027.WorKerS.Dev&fp=chrome&alpn=http/1.1&insecure=0&allowInsecure=0&type=ws&host=027.electrocellco-cf-027.workers.dev&path=/eyJqdW5rIjoidDJ0UDljR2ZIaVBQakg2byIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560#[83454] - Telegram : @V2All
 trojan://BxceQaOe@58.152.25.236:443?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=t.me/ripaojiedian#🐲24@ConfigV2RayNG
 trojan://BxceQaOe@58.152.26.173:443/?type=tcp&security=tls&allowInsecure=1#香港
+trojan://FreakConfig@77.232.142.141:42598?security=none&headerType=&type=tcp#⚡Telegram = @SOSkeyNET
 trojan://IXoJvZ7SJb@de.scpnb.top:44792?security=reality&pbk=HuKTPB5e7tzLiGoYPhPRFgHE_1VJNaroU-TTRA9xAyI&fp=chrome&type=grpc&sni=cloudflare.com&sid=95#🐲3@ConfigV2RayNG
 trojan://POORIARED@172.67.134.185:443?path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed&security=tls&fp=chrome&type=ws&sni=reDfRee8.REDFree8.ir#%telegram » 𝗺𝗮𝗶𝗻𝘃𝟮𝗿𝗮𝘆
 trojan://POORIARED@172.67.134.185:443?path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed&security=tls&fp=chrome&type=ws&sni=reDfRee8.REDFree8.ir#telegram » 𝗺𝗮𝗶𝗻𝘃𝟮𝗿𝗮𝘆
@@ -78,31 +72,47 @@ trojan://df371b78-abfe-43b0-865a-a0e640e0ca0c@zzula.ir:443?path=/34.42.77.60=443
 trojan://df371b78-abfe-43b0-865a-a0e640e0ca0c@zzula.ir:443?path=/34.42.77.60=443&security=tls&insecure=1&host=heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=heavenlyblue.qzz.io#@V2rayAlpha--1
 trojan://df371b78-abfe-43b0-865a-a0e640e0ca0c@zzula.ir:443?path=/34.42.77.60=443&security=tls&insecure=1&host=heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=heavenlyblue.qzz.io#⚡Telegram = @XpnTeam
 trojan://df371b78-abfe-43b0-865a-a0e640e0ca0c@zzula.ir:443?path=/34.42.77.60=443&security=tls&insecure=1&host=iceberg.qzz.io&type=ws&allowInsecure=1&sni=iceberg.qzz.io#@V2rayAlpha--4
-trojan://f40d74b6-6092-4a32-bde1-0eec5db90de0@xiaozhu1.kkieo555.cn:41274?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#@Freev2rng
-trojan://f40d74b6-6092-4a32-bde1-0eec5db90de0@xiaozhu1.kkieo555.cn:41274?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#✅سرورها بیشتردرکانال:prrofile_purple@✅
-trojan://freedom@irancell.buzzmuzzpanel.online:443?security=tls&sni=047.eleCTROCelLco-Cf-047.woRkers.DEV&fp=chrome&alpn=http/1.1&insecure=0&allowInsecure=0&type=ws&host=047.electrocellco-cf-047.workers.dev&path=/eyJqdW5rIjoienRVUEM4N2p6dXE2Wm0iLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560#[83457] - Telegram : @V2All
-trojan://freedom@irancell.buzzmuzzpanel.online:443?security=tls&sni=051.EleCTrOceLlCo-cF-051-60C.woRkeRS.DeV&fp=chrome&alpn=http/1.1&insecure=0&allowInsecure=0&type=ws&host=051.electrocellco-cf-051-60c.workers.dev&path=/eyJqdW5rIjoiSWN4YW5sdEZ6STdLZXpHSyIsInByb3RvY29sIjoidHIiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560#[83453] - Telegram : @V2All
+trojan://humanity@208.103.161.110:443?path=/assignment&security=tls&alpn=h2,http/1.1&host=www.creationlong.org&fp=chrome&type=ws&sni=www.creationlong.org#⚡Telegram = @SOSkeyNET
+trojan://humanity@208.103.161.110:443?path=/assignment&security=tls&alpn=h2,http/1.1&insecure=0&host=www.creationlong.org&fp=chrome&type=ws&allowInsecure=0&sni=www.creationlong.org#VPNBaz
+trojan://humanity@208.103.161.110:443?path=/assignment&security=tls&alpn=h2,http/1.1&insecure=0&host=www.creationlong.org&fp=chrome&type=ws&allowInsecure=0&sni=www.creationlong.org#✅سرورها بیشتردرکانال:prrofile_purple@✅
+trojan://humanity@chatgpt.com:443?path=/assignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#@Shh_Proxy
+trojan://humanity@chatgpt.com:443?path=/assignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#@YamYamProxy
+trojan://humanity@chatgpt.com:443?path=/assignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#@sirarm1n
+trojan://humanity@chatgpt.com:443?path=/assignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#IR-@V2rayAlpha--2
+trojan://humanity@chatgpt.com:443?path=/assignment&security=tls&insecure=0&host=www.gossipglove.com&fp=chrome&type=ws&allowInsecure=0&sni=www.gossipglove.com#⚡Telegram = @SOSkeyNET
+trojan://humanity@free1.aattaash.com:443?path=/assignment&security=tls&alpn=h2,http/1.1&host=www.creationlong.org&fp=chrome&type=ws&sni=www.creationlong.org#[🇺🇸]t.me/ConfigsHub
+trojan://humanity@free1.aattaash.com:443?path=/assignment&security=tls&alpn=h2,http/1.1&host=www.creationlong.org&fp=chrome&type=ws&sni=www.creationlong.org#⚡Telegram = @SOSkeyNET
 trojan://humanity@www.calmlunch.com:443?path=/assignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#🐲7@ConfigV2RayNG
+trojan://humanity@www.gossipglove.com:443?security=tls&sni=www.gossipglove.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#@sogoandfuckyourlove
+trojan://humanity@www.gossipglove.com:443?security=tls&sni=www.gossipglove.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#https://t.me/ConfigX2ray
+trojan://humanity@www.gossipglove.com:443?security=tls&sni=www.gossipglove.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#⚡Telegram = @SOSkeyNET
 trojan://nodes-b211f28a@node-tr-1.v2sv.top:2083?security=tls&insecure=0&host=TELEGRAM--JKVPN&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#🇩🇪@JKVPN
-trojan://telegram-id-directvpn@13.37.69.223:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡️Telegram = @unlimiteddev
-trojan://telegram-id-directvpn@3.123.120.25:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
-trojan://telegram-id-privatevpns@13.37.69.223:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡️Telegram = @unlimiteddev
-trojan://telegram-id-privatevpns@3.123.120.25:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-directvpn@13.39.197.201:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-directvpn@15.236.72.233:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-directvpn@18.198.0.30:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[83788] - Telegram : @V2All
+trojan://telegram-id-directvpn@18.198.0.30:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[🇩🇪]t.me/ConfigsHub
+trojan://telegram-id-directvpn@18.198.0.30:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-directvpn@18.198.0.30:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @vmessorg
+trojan://telegram-id-privatevpns@13.39.197.201:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-privatevpns@15.236.72.233:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-privatevpns@18.198.0.30:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[83783] - Telegram : @V2All
+trojan://telegram-id-privatevpns@18.198.0.30:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#[🇩🇪]t.me/ConfigsHub
+trojan://telegram-id-privatevpns@18.198.0.30:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @SOSkeyNET
+trojan://telegram-id-privatevpns@18.198.0.30:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#⚡Telegram = @vmessorg
 trojan://telegram-id-privatevpns@3.123.120.25:22222?security=tls&alpn=http/1.1&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=trojan.burgerip.co.uk#@Spotify_Porteghali 5018
-trojan://trojan@162.159.152.4:8443?path=/?ed&security=tls&insecure=0&host=azadnet-f03.pages.dev&fp=chrome&type=ws&allowInsecure=0&sni=azadnet-f03.pages.dev#✅سرورها بیشتردرکانال:prrofile_purple@✅
 trojan://trojan@top.imlast2.com:443?path=/?ed=2560&security=tls&insecure=0&host=nixian.pages.dev&fp=chrome&type=ws&allowInsecure=0&sni=nixian.pages.dev#@v2rayngzendegimamad🕊️
+trojan://tunnel-jdybi@tr-1.stunnel.cc:8441?security=tls&sni=creativecommons.org&alpn=http/1.1&allowInsecure=1&type=tcp&headerType=none&host=tr-1.stunnel.cc#[83804] - Telegram : @V2All
 trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@45.32.158.138:20994?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=ads.x5.ru#🚨7@ConfigV2RayNG
-trojan://vpn_connects@comando.fisifisi.com:80?type=ws&amp%3Bhost=takashi1.vpconc.com&amp%3Bpath=/ed&amp%3Bsecurity=none#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20TROJAN%20%7C%20%40ehsawn8%20%231
 trojan://FDIypSwe64a3DA7un2R8DFjYXZO3NS05gKZTTOC8SxO0Fy3cqYg3EaFDA3ABaEYKNx39D@kuame.missionsec.us:443?security=tls&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=kuame.missionsec.us#%F0%9F%87%AF%F0%9F%87%B5%20JP%20%7C%20TROJAN%20%7C%20%40free4allvpn%20%231
-trojan://telegram-id-privatevpns@52.59.174.18:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20TROJAN%20%7C%20%40privatevpns%20%231
-trojan://telegram-id-privatevpns@15.236.111.194:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40privatevpns%20%231
-trojan://trojan@162.159.152.4:8443?path=/%3Fed&amp%3Bsecurity=tls&amp%3Binsecure=0&amp%3Bhost=azadnet-f03.pages.dev&amp%3Bfp=chrome&amp%3Btype=ws&amp%3BallowInsecure=0&amp%3Bsni=azadnet-f03.pages.dev#%F0%9F%87%BD%F0%9F%87%BD%20XX%20%7C%20TROJAN%20%7C%20%40prrofile_purple%20%231
+trojan://telegram-id-privatevpns@13.39.197.201:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40privatevpns%20%231
+trojan://telegram-id-privatevpns@15.236.72.233:22222?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40privatevpns%20%232
 trojan://22f86840-bcac-11ee-abea-1239d0255272@chatbuzzteambhm.chatbuzzt7150.workers.dev:443?security=tls&amp%3Btype=ws&amp%3BheaderType=none&amp%3Bpath=%252Fhowdy&amp%3Bsni=de1.test3.net&amp%3Bhost=de1.test3.net#%F0%9F%87%BD%F0%9F%87%BD%20XX%20%7C%20TROJAN%20%7C%20%40teamvpnpro%20%231
 trojan://c7f9b8f0-bfdb-11ee-a15c-1239d0255272@chatbuzzteambhm.chatbuzzt7150.workers.dev:443?security=tls&amp%3Btype=ws&amp%3BheaderType=none&amp%3Bpath=%252Fhowdy&amp%3Bsni=de1.test3.net&amp%3Bhost=de1.test3.net#%F0%9F%87%BD%F0%9F%87%BD%20XX%20%7C%20TROJAN%20%7C%20%40teamvpnpro%20%232
-trojan://TurbooServer@cdn.turbooserver.com:80?path=/ed%3D25&amp%3Bsecurity=none&amp%3Bhost=jone-turboo-server.com&amp%3Btype=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20TROJAN%20%7C%20%40turboo_server%20%231
+trojan://TurbooServer@cdn1.turbooserver.com:80?path=/ed&amp%3Bsecurity=none&amp%3Bhost=turboo-server.online&amp%3Btype=ws#%F0%9F%87%BA%F0%9F%87%B8%20US%20%7C%20TROJAN%20%7C%20%40turboo_server%20%231
 trojan://e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad@51.91.11.29:80?security=tls#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40v2rayngconfig%20%231
 trojan://Xa4%5El%28%3B.%3BB%23a@104.18.26.90:443?path=/trUXByA1rnbs4YQ1Xw%3Fed%3D2560&amp%3Bsecurity=tls&amp%3Balpn=h3%2Ch2%2Chttp/1.1&amp%3Bhost=s1.mitivpn.workers.dev&amp%3Bfp=randomized&amp%3Btype=ws&amp%3Bsni=S1.mitivpN.wOrKeRS.DEV#%F0%9F%87%BD%F0%9F%87%BD%20XX%20%7C%20TROJAN%20%7C%20%40v2rayngconfiig%20%231
-trojan://telegram-id-v2rayvpnchannel@52.59.174.18:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20DE%20%7C%20TROJAN%20%7C%20%40v2rayvpnchannel%20%231
+trojan://telegram-id-v2rayvpnchannel@13.39.197.201:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40v2rayvpnchannel%20%231
+trojan://telegram-id-v2rayvpnchannel@15.236.72.233:22223?security=tls&amp%3Balpn=http/1.1&amp%3BheaderType=none&amp%3Btype=tcp&amp%3Bsni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20FR%20%7C%20TROJAN%20%7C%20%40v2rayvpnchannel%20%232
 trojan://ca2345ba-46e7-3991-b1b7-45d18954caf1@azgy001.xibai6.top:20790#%F0%9F%87%BA%F0%9F%87%B8_US_%E7%BE%8E%E5%9B%BD
 trojan://182228812d1e0f23@60.249.3.229:3389#%F0%9F%87%B9%F0%9F%87%BC_TW_%E5%8F%B0%E6%B9%BE
 trojan://36fe28a331638747@60.249.3.226:3389#%F0%9F%87%B9%F0%9F%87%BC_TW_%E5%8F%B0%E6%B9%BE
@@ -200,8 +210,6 @@ trojan://zWFjJENcljZm@usa.visa.com:443/?type=ws&host=vahidqaz-7o61u7.vahidqaz.wo
 trojan://3628ca8d-6371-45df-879c-2d3e5d110b51@university.lele233.com:443?security=tls#%F0%9F%8F%81RELAY-104.21.23.141-0011
 trojan://shefelnak@88.150.137.177:443?security=tls&sni=content-provider4.cdn-delivery.akamaicd.com#%F0%9F%87%AC%F0%9F%87%A7GB-88.150.137.177-0030
 trojan://fEDTdp8Sy1@95.85.76.136:56810?security=tls&sni=tr1.digisport.shop#%F0%9F%87%B9%F0%9F%87%B7TR-95.85.76.136-0046
-trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@Chatgpt.com:443?path=%2F130.162.193.183%3A15401&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%E2%9B%84%20%40ProxyVPN11%20%7C%20%D9%86%D8%AA%20%D9%85%D9%84%DB%8C`
-trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@cdn.halazzon.ir:443?path=%2F175.45.183.67%3A443&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%F0%9F%90%9D%20%40ProxyVPN11%20%7C%20%D9%86%D8%AA%20%D9%85%D9%84%DB%8C`
 trojan://dd04c158-1bac-47cd-99c1-5c4f64796dd5@supersouth.xn--mesv7f5toqlp.club:12004?security=tls#%F0%9F%8F%81RELAY-172.67.197.47-0467
 trojan://BxceQaOe@36.156.102.115:26876?security=tls#%F0%9F%87%A8%F0%9F%87%B3CN-36.156.102.115-0584
 trojan://e2afc128-ca51-39b6-897c-eb2649825df9@yn-zf.jiashumao.net:40375?security=tls#%F0%9F%87%BA%F0%9F%87%B8US-162.209.175.122-0593
@@ -778,120 +786,119 @@ trojan://0b65bb06-6b28-487a-8e3c-820dda51e977@104.21.12.87:443?security=tls&sni=
 trojan://a0514d9b-d109-47fd-b173-1e7f83268f21@104.16.183.101:443?security=tls&sni=tws23.kallepache.store&type=ws&path=/update&Host=tws23.kallepache.store#%F0%9F%8F%81RELAY-104.16.183.101-9184
 trojan://73658d71-be45-4495-bc3e-e69d36ce73b5@103.234.53.23:50014?security=tls&sni=telewebion.com#%F0%9F%87%AD%F0%9F%87%B0HK-103.234.53.23-9190
 trojan://x.8ur1QiCyzlRHXeaB5UwoDfgZ04s@140.82.35.244:20994/?type=tcp&security=tls&sni=ads.x5.ru&allowInsecure=1#%F0%9F%9A%A813%40oneclickvpnkeys
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?allowInsecure=0&sni=www.semanticstaplegun.click#hamedp71%3A%3A%F0%9F%87%B3%F0%9F%87%B4
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?allowInsecure=1&sni=www.semanticstaplegun.click#hamedp71%3A%3A%F0%9F%87%B3%F0%9F%87%B4
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.130.21:4006?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F
 trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.105.192:1933?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%87%AF%F0%9F%87%B5
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.130.21:5076?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%87%BA%F0%9F%87%B8
 trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.72.205:544?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AC
+trojan://655a3e72-788e-41c1-8c23-6032490c64a0@green2.cdntencentmusic.com:31101?allowInsecure=1&sni=green2.cdntencentmusic.com#hamedp71%3A%3A%F0%9F%87%AD%F0%9F%87%B0
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.85.33:5076?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.130.21:5076?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F
 trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.124.17:3076?allowInsecure=1&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%87%B8%F0%9F%87%AC
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.85.33:5076?allowInsecure=0&sni=www.nintendogames.net#hamedp71%3A%3A%F0%9F%87%BA%F0%9F%87%B8
-trojan://humanity@www.multiplydose.com:443?security=tls&sni=www.multiplydose.com&fp=chrome&allowInsecure=0&type=ws&path=/assignment#hamedp71%3A%3A%F0%9F%87%B3%F0%9F%87%B1
-trojan://fe793ec6-b7a9-4f30-b623-d3c9ca6eb37c@ssr-de-152.rosena.ggff.net:19233?allowInsecure=1&sni=ssr-de-152.rosena.ggff.net&alpn=http/1.1#hamedp71%3A%3A%F0%9F%87%A9%F0%9F%87%AA
-trojan://30077070-596e-48ea-9400-14c8ed07bd97@tuntro006.instconn.com:443?security=tls&sni=torontorm1.686911.xyz#hamedp71%3A%3A%F0%9F%87%A8%F0%9F%87%A6
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&headerType=none&type=tcp&sni=www.semanticstaplegun.click#hamedp71%3A%3A%F0%9F%87%B3%F0%9F%87%B4
-trojan://humanity@chatgpt.com:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://nodes-b211f28a@node-id-1.v2sv.top:2083?type=tcp&headerType=none&security=tls&sni=node-id-1.v2sv.top#hamedp71%3A%3A%F0%9F%87%AE%F0%9F%87%A9
 trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&host=www.multiplydose.com&fp=chrome&type=ws&sni=www.multiplydose.com#hamedp71%3A%3A%F0%9F%87%B3%F0%9F%87%B1
+trojan://humanity@chatgpt.com:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
+trojan://30077070-596e-48ea-9400-14c8ed07bd97@tuntro006.instconn.com:443?security=tls&sni=torontorm1.686911.xyz#hamedp71%3A%3A%F0%9F%87%A8%F0%9F%87%A6
+trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&headerType=none&type=tcp&sni=www.semanticstaplegun.click#hamedp71%3A%3A%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F
 trojan://humanity@www.calmlunch.com:443/?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com&allowInsecure=1#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
-trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099/?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#hamedp71%3A%3A%F0%9F%87%AE%F0%9F%87%B8
 trojan://nodes-b211f28a@node-tr-1.v2sv.top:2083?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#hamedp71%3A%3A%F0%9F%87%B9%F0%9F%87%B7
-trojan://trojan@109.234.211.66:8443?security=tls&sni=store.timimi.dpdns.org&fp=chrome&type=ws&path=/&host=store.timimi.dpdns.org#hamedp71%3A%3A%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F
+trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099/?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#hamedp71%3A%3A%F0%9F%87%AE%F0%9F%87%B8
+trojan://xtA6WF92Itmhm9jfvXUH1MDVL@free-de-3.undef.network:443/?type=tcp&security=tls&sni=free-de-3.undef.network&allowInsecure=1#hamedp71%3A%3A%F0%9F%87%A9%F0%9F%87%AA
 trojan://humanity@chatgpt.com:443?type=ws&host=www.gossipglove.com&path=%2Fassignment&security=tls&fp=chrome&sni=www.gossipglove.com#hamedp71%3A%3A%F0%9F%87%AB%F0%9F%87%B7
-trojan://5a2c16f9@172.64.147.211:2096?path=/Telegram🇨🇳WangCai2&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=snippets.kkii.eu.org#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20608304
-trojan://zWFjJENcljZm@104.18.2.150:443/?type=ws&host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&allowInsecure=1&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20694537
-trojan://zWFjJENcljZm@104.18.2.150:443?type=ws&host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=/?ed=2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&allowInsecure=1&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20724091
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.145.158:443?security=tls&type=ws&sni=_acme-challenge.2go.cloudns.be&path=/&host=_acme-challenge.2go.cloudns.be#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20786296
-trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@194.76.18.23:443?path=/175.45.183.67:443&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%F0%9F%87%B0%F0%9F%87%BF%20ShatakVPN%20809753
-trojan://5a2c16f9@94.140.0.238:2096?security=tls&sni=snippets.kkii.eu.org&type=ws&host=snippets.kkii.eu.org&path=/TelegramU0001F1E8U0001F1F3WangCai2#%F0%9F%87%A6%F0%9F%87%AA%20ShatakVPN%20915207
-trojan://humanity@104.18.8.83:443/?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20409696
-trojan://humanity@104.18.9.83:443?type=ws&host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20669514
-trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&host=www.calmlunch.com&type=ws&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20878457
-trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20284243
-trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20850522
-trojan://humanity@104.18.9.83:443?path=/assignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20176129
-trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&allowInsecure=1&type=ws&host=www.calmlunch.com&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20701059
-trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20211018
-trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment&allow_insecure=0#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20303143
-trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment&allow_insecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20542837
-trojan://humanity@104.18.32.47:443?path=/assignment&security=tls&host=www.multiplydose.com&fp=chrome&type=ws&sni=www.multiplydose.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20301497
-trojan://humanity@104.18.11.110:443?security=tls&sni=www.multiplydose.com&fp=chrome&type=ws&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20822257
-trojan://bIa-DailY_cOnFIgs@104.17.97.5:2053#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20361191
-trojan://5a2c16f9@104.18.19.253:443?path=/&amp;security=tls&amp;host=snippets.kkii.eu.org&amp;type=ws&amp;sni=snippets.kkii.eu.org#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20624624
-trojan://trojan@162.159.152.4:8443?path=/?ed&security=tls&insecure=0&host=azadnet-f03.pages.dev&fp=chrome&type=ws&allowInsecure=0&sni=azadnet-f03.pages.dev#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20786838
-trojan://humanity@172.64.155.209:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20753647
-trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@172.64.155.209:443?path=/130.162.193.183:15401&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20847961
-trojan://humanity@104.18.32.47:443?path=/assignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20890896
-trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.149.209:443?path=/&amp;security=tls&amp;host=_acme-challenge.2go.cloudns.be&amp;type=ws&amp;sni=_acme-challenge.2go.cloudns.be#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20469050
-trojan://trojan@172.67.75.172:8443?path=/&amp;security=tls&amp;host=fofang.pages.dev&amp;type=ws&amp;sni=fofang.pages.dev#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20786446
-trojan://POORIARED@172.67.134.185:443?path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560&security=tls&fp=chrome&type=ws&sni=reDfRee8.REDFree8.ir#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20815864
-trojan://fe793ec6-b7a9-4f30-b623-d3c9ca6eb37c@104.21.5.93:19233?sni=ssr-de-152.rosena.ggff.net&alpn=http/1.1&path=/#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20114189
-trojan://f2191442-1436-3d79-801e-80d8de896c73@104.21.66.223:443?sni=jp2-july.88888802.xyz#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20761457
-trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?security=none&headerType=none&type=tcp#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20773865
-trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?security=none&headerType=none&type=tcp#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20784606
-trojan://telegram-id-directvpn@3.123.120.25:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20350170
-trojan://telegram-id-privatevpns@3.123.120.25:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20317520
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&headerType=none&type=tcp&sni=www.semanticstaplegun.click#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20744532
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semanticstaplegun.click&path=/#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20383745
-trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semanticstaplegun.click&type=tcp&headerType=none&path=/#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20472226
-trojan://02948bde80594712b974368035f294dd@88.214.24.235:9443?security=reality&amp;pbk=au0aQ5QVdLNbzMShbL9Anhi5hOPXMNJVBhbkuFP7Sk0&amp;headerType=none&amp;fp=random&amp;type=tcp&amp;sni=apple.com&amp;sid=aabbccdd#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20427675
-trojan://02948bde80594712b974368035f294dd@88.214.24.235:9443?security=reality&pbk=au0aQ5QVdLNbzMShbL9Anhi5hOPXMNJVBhbkuFP7Sk0&host=/@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-?ed=2560&headerType=none&fp=random&type=tcp&sni=apple.com&sid=aabbccdd#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20860030
-trojan://dkp96mJVuj@5.175.249.117:443?security=reality&sni=google.com&fp=chrome&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&sid=9715efa856269398&spx=/&type=tcp&headerType=http&host=www.namasha.com,s45.namasha.com#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20378685
-trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443/?type=tcp&security=tls&sni=free-de-3.undef.network&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20809522
-trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443?type=tcp&security=tls&sni=free-de-3.undef.network&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20861341
-trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443?security=tls&sni=free-de-3.undef.network#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20425637
-trojan://zL7CpPYxhvFtYqm2yAbHrw@45.144.51.35:7390?security=none&headerType=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20ShatakVPN%20139365
-trojan://zL7CpPYxhvFtYqm2yAbHrw@45.144.51.35:7390?security=none&headerType=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20ShatakVPN%20888713
-trojan://nodes-b211f28a@185.181.208.21:2083?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#%F0%9F%87%B9%F0%9F%87%B7%20ShatakVPN%20723493
-trojan://nodes-b211f28a@185.181.208.21:2083?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#%F0%9F%87%B9%F0%9F%87%B7%20ShatakVPN%20332824
-trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099/?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#%F0%9F%87%AE%F0%9F%87%B8%20ShatakVPN%20851155
-trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#%F0%9F%87%AE%F0%9F%87%B8%20ShatakVPN%20283458
-trojan://chslToBpxJ@209.200.246.248:22086?security=reality&sni=www.cloudflare.com&fp=chrome&pbk=Bo-0prp3Nlf3NX9egy-iCjLBONYo9j2lniXaEtET3ns&sid=4f69441f911943&type=grpc&path=/#%F0%9F%87%A8%F0%9F%87%A6%20ShatakVPN%20909666
-trojan://1e32fe52198848788f029c2ec244f347@212.192.14.227:9443?type=tcp&sni=ya.ru&fp=random&security=reality&pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q&sid=aabbccdd#%F0%9F%87%B7%F0%9F%87%BA%20ShatakVPN%20924588
-trojan://7bdf5985-65ff-4f56-935a-2ff73cf4bf11@85.211.240.69:41277?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#%F0%9F%87%B2%F0%9F%87%BE%20ShatakVPN%20220359
-trojan://f40d74b6-6092-4a32-bde1-0eec5db90de0@85.211.240.69:41274?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#%F0%9F%87%B2%F0%9F%87%BE%20ShatakVPN%20795878
-trojan://869e9086806483ca4744a4cb0f3d6e16@58.152.18.124:443?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20972994
-trojan://869e9086806483ca4744a4cb0f3d6e16@58.152.18.124:443?sni=www.nintendogames.net&path=/#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20782481
-trojan://BxceQaOe@58.152.25.236:443?security=tls&sni=t.me/ripaojiedian&type=tcp&headerType=none&path=/&allow_insecure=1#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20551459
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20908641
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20839853
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20576486
-trojan://381f2e86233720eacda26d50e9aa26da@160.16.63.16:1281?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20207764
-trojan://381f2e86233720eacda26d50e9aa26da@160.16.63.16:3901?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20167346
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:1933?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20755838
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:1933?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20376390
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20320147
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20513791
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20799356
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:5076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20819359
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:5076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20179606
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20492081
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20567568
-trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20504013
-trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@202.181.103.246:1334?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20182543
-trojan://09007daa-a345-4ec2-b3e8-37068855f877@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20765205
-trojan://3c9e4a24-aa0f-4571-970b-d374ccded73b@220.130.58.136:31102?security=tls&sni=green2.cdntencentmusic.com#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20587197
-trojan://3d6feccc-ce86-4bf9-b943-207df9818ad5@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20112554
-trojan://46fb0d3a-8fe4-417c-b974-7dec112740f6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20489202
-trojan://4d1dd99b-33b5-4fbd-8a29-282815fc352b@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20229804
-trojan://5c762006-ed60-4b35-b8fe-4520adeac906@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20916843
-trojan://655a3e72-788e-41c1-8c23-6032490c64a0@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20733345
-trojan://66f19341-ba12-4446-9bb3-fc4e36d5cac7@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20120058
-trojan://98edcf90-4337-47e3-b389-7923f67aefc7@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20393408
-trojan://b41d2d22-2649-426a-9ee7-99bffdc98418@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20310615
-trojan://d6f4af2b-43c1-49e7-86c9-1d706e8c40ef@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20569912
-trojan://d8b3841a-ece7-4ce7-b2f9-30fc909cbeea@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20281334
-trojan://dec43cf3-32b5-4cad-bc3e-f1b905cc9dc6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20381333
-trojan://e77009cf-13db-4014-87d1-800bcfa9e173@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20453900
-trojan://f0d85635-6590-4a39-9e9d-10d49fdab2e2@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20863699
-trojan://f4e646fb-d984-444d-9fee-65068ce0a0d6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20700636
-trojan://OdgHycGphesfLmPMYolUF@172.238.229.254:14051?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=api.avito.ru#%F0%9F%87%AE%F0%9F%87%B9%20ShatakVPN%20346069
-trojan://kuGDUhAYqXnvIomV0Kdljfor@167.17.70.117:27234?security=tls&amp;headerType=none&amp;type=tcp#%F0%9F%87%B3%F0%9F%87%B1%20ShatakVPN%20278346
-trojan://telegram-id-directvpn@13.37.69.223:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20611863
-trojan://telegram-id-directvpn@15.236.111.194:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20849515
-trojan://telegram-id-directvpn@51.44.195.232:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20643018
-trojan://telegram-id-directvpn@52.59.174.18:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20568605
-trojan://telegram-id-privatevpns@13.37.69.223:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20961621
-trojan://telegram-id-privatevpns@15.236.111.194:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20354726
-trojan://telegram-id-privatevpns@35.181.195.29:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20196891
-trojan://telegram-id-privatevpns@51.44.195.232:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20956418
-trojan://telegram-id-privatevpns@52.59.174.18:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20471295
-trojan://tpCznR-P5%3DjZUb%23c@66.245.193.152:17126?security=tls&headerType=none&type=tcp&sni=ctaldikgfyw.uefahpgsyz.click#%F0%9F%87%AC%F0%9F%87%A7%20ShatakVPN%20919430
+trojan://5a2c16f9@104.18.19.253:443?path=/&amp;security=tls&amp;host=snippets.kkii.eu.org&amp;type=ws&amp;sni=snippets.kkii.eu.org#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20769807
+trojan://zWFjJENcljZm@104.18.3.150:443/?type=ws&host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=%2F%3Fed%3D2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&allowInsecure=1&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20462743
+trojan://zWFjJENcljZm@104.18.3.150:443?type=ws&host=vahidqaz-7o61u7.vahidqaz.workers.dev&path=/?ed=2560&security=tls&sni=vahidqaz-7o61u7.vahidqaz.workers.dev&allowInsecure=1&fp=chrome#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20339831
+trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@194.76.18.23:443?path=/175.45.183.67:443&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%F0%9F%87%B0%F0%9F%87%BF%20ShatakVPN%20104010
+trojan://trojan@162.159.152.4:8443?path=/?ed&security=tls&insecure=0&host=azadnet-f03.pages.dev&fp=chrome&type=ws&allowInsecure=0&sni=azadnet-f03.pages.dev#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20493116
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@172.64.144.82:443?security=tls&type=ws&sni=_acme-challenge.2go.cloudns.be&path=/&host=_acme-challenge.2go.cloudns.be#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20925886
+trojan://5a2c16f9@94.140.0.238:2096?security=tls&sni=snippets.kkii.eu.org&type=ws&host=snippets.kkii.eu.org&path=/TelegramU0001F1E8U0001F1F3WangCai2#%F0%9F%87%A6%F0%9F%87%AA%20ShatakVPN%20926709
+trojan://humanity@104.18.32.47:443?path=/assignment&security=tls&host=www.multiplydose.com&fp=chrome&type=ws&sni=www.multiplydose.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20448110
+trojan://bIa-DailY_cOnFIgs@104.17.97.5:2053#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20425565
+trojan://5a2c16f9@172.64.147.211:2096?path=/Telegram🇨🇳WangCai2&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=snippets.kkii.eu.org#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20124714
+trojan://humanity@104.18.10.110:443?security=tls&sni=www.multiplydose.com&fp=chrome&type=ws&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20602119
+trojan://humanity@104.18.9.83:443/?type=ws&host=www.calmlunch.com&path=%2Fassignment&security=tls&sni=www.calmlunch.com&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20971881
+trojan://humanity@104.18.8.83:443?type=ws&host=www.calmlunch.com&path=/assignment&security=tls&sni=www.calmlunch.com&allowInsecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20846899
+trojan://humanity@104.18.9.83:443?path=/assignment&security=tls&host=www.calmlunch.com&type=ws&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20918239
+trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20929018
+trojan://humanity@104.18.9.83:443?path=/assignment&security=tls&insecure=1&fp=chrome&type=ws&allowInsecure=1&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20370016
+trojan://humanity@104.18.8.83:443?path=/assignment&security=tls&insecure=1&host=www.calmlunch.com&type=ws&allowInsecure=1&sni=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20781133
+trojan://humanity@104.18.8.83:443?security=tls&sni=www.calmlunch.com&allowInsecure=1&type=ws&host=www.calmlunch.com&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20439318
+trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20379901
+trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment&allow_insecure=0#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20184706
+trojan://humanity@104.18.9.83:443?security=tls&sni=www.calmlunch.com&type=ws&host=www.calmlunch.com&path=/assignment&allow_insecure=1#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20836572
+trojan://humanity@104.18.32.47:443?path=%2Fassignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20662431
+trojan://de57fef4-a939-44b3-9bce-f7e9fb12347a@104.18.32.47:443?path=/130.162.193.183:15401&security=tls&insecure=1&host=source.zoom.us.heavenlyblue.qzz.io&type=ws&allowInsecure=1&sni=source.zoom.us.heavenlyblue.qzz.io#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20892368
+trojan://humanity@172.64.155.209:443?path=/assignment&security=tls&host=www.gossipglove.com&fp=chrome&type=ws&sni=www.gossipglove.com#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20353282
+trojan://87d1bfd4-574e-4c96-ad42-0426f27461ff@104.18.38.47:443?path=/&amp;security=tls&amp;host=_acme-challenge.2go.cloudns.be&amp;type=ws&amp;sni=_acme-challenge.2go.cloudns.be#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20530867
+trojan://trojan@172.67.75.172:8443?path=/&amp;security=tls&amp;host=fofang.pages.dev&amp;type=ws&amp;sni=fofang.pages.dev#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20823964
+trojan://f2191442-1436-3d79-801e-80d8de896c73@104.21.66.223:443?sni=jp2-july.88888802.xyz#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20931009
+trojan://POORIARED@172.67.134.185:443?path=/eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560&security=tls&fp=chrome&type=ws&sni=reDfRee8.REDFree8.ir#%F0%9F%87%BA%F0%9F%87%B8%20ShatakVPN%20769704
+trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?security=none&headerType=none&type=tcp#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20995647
+trojan://zL7CpPYxhvFtYqm2yAbHrw@137.74.41.156:7494?security=none&headerType=none&type=tcp#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20618198
+trojan://02948bde80594712b974368035f294dd@88.214.24.235:9443?security=reality&amp;pbk=au0aQ5QVdLNbzMShbL9Anhi5hOPXMNJVBhbkuFP7Sk0&amp;headerType=none&amp;fp=random&amp;type=tcp&amp;sni=apple.com&amp;sid=aabbccdd#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20646609
+trojan://02948bde80594712b974368035f294dd@88.214.24.235:9443?security=reality&pbk=au0aQ5QVdLNbzMShbL9Anhi5hOPXMNJVBhbkuFP7Sk0&host=/@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-@V2WRAY-?ed=2560&headerType=none&fp=random&type=tcp&sni=apple.com&sid=aabbccdd#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20369892
+trojan://dkp96mJVuj@5.175.249.117:443?security=reality&sni=google.com&fp=chrome&pbk=kEfLVGaYdINZml2Jz3NMy8dMhlsXY8PiF08dtGN4cH8&sid=9715efa856269398&spx=/&type=tcp&headerType=http&host=www.namasha.com,s45.namasha.com#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20177109
+trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&headerType=none&type=tcp&sni=www.semanticstaplegun.click#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20452665
+trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semanticstaplegun.click&path=/#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20328786
+trojan://wp9IsiY82uQhcmgNC1eoBM@80.173.231.254:12420?security=tls&sni=www.semanticstaplegun.click&type=tcp&headerType=none&path=/#%F0%9F%87%B3%F0%9F%87%B4%20ShatakVPN%20384153
+trojan://zL7CpPYxhvFtYqm2yAbHrw@45.144.51.35:7390?security=none&headerType=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20ShatakVPN%20784663
+trojan://zL7CpPYxhvFtYqm2yAbHrw@45.144.51.35:7390?security=none&headerType=none&type=tcp#%F0%9F%87%B5%F0%9F%87%B1%20ShatakVPN%20347672
+trojan://nodes-b211f28a@185.181.208.21:2083?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#%F0%9F%87%B9%F0%9F%87%B7%20ShatakVPN%20659774
+trojan://nodes-b211f28a@185.181.208.21:2083?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=node-tr-1.v2sv.top#%F0%9F%87%B9%F0%9F%87%B7%20ShatakVPN%20304695
+trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099/?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#%F0%9F%87%AE%F0%9F%87%B8%20ShatakVPN%20194203
+trojan://qmBSKnAl6LYi9%3Dz23Rs.Z@37.235.49.209:28099?type=tcp&security=tls&sni=celestialcorset.crystalhamster.click&allowInsecure=1&fp=chrome#%F0%9F%87%AE%F0%9F%87%B8%20ShatakVPN%20306498
+trojan://chslToBpxJ@209.200.246.248:22086?security=reality&sni=www.cloudflare.com&fp=chrome&pbk=Bo-0prp3Nlf3NX9egy-iCjLBONYo9j2lniXaEtET3ns&sid=4f69441f911943&type=grpc&path=/#%F0%9F%87%A8%F0%9F%87%A6%20ShatakVPN%20856714
+trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443/?type=tcp&security=tls&sni=free-de-3.undef.network&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20322561
+trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443?type=tcp&security=tls&sni=free-de-3.undef.network&allowInsecure=1#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20801096
+trojan://xtA6WF92Itmhm9jfvXUH1MDVL@185.235.137.77:443?security=tls&sni=free-de-3.undef.network#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20173903
+trojan://7bdf5985-65ff-4f56-935a-2ff73cf4bf11@85.211.240.69:41277?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#%F0%9F%87%B2%F0%9F%87%BE%20ShatakVPN%20210618
+trojan://f40d74b6-6092-4a32-bde1-0eec5db90de0@85.211.240.69:41274?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1#%F0%9F%87%B2%F0%9F%87%BE%20ShatakVPN%20346751
+trojan://BxceQaOe@58.152.25.236:443?security=tls&sni=t.me/ripaojiedian&type=tcp&headerType=none&path=/&allow_insecure=1#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20756423
+trojan://1e32fe52198848788f029c2ec244f347@212.192.14.227:9443?type=tcp&sni=ya.ru&fp=random&security=reality&pbk=GooqN94J-NNbWxkVsDb7NIQW4xXhkMGByk58ihKwX1Q&sid=aabbccdd#%F0%9F%87%B7%F0%9F%87%BA%20ShatakVPN%20951318
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:1933?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20256112
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:1933?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20260227
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20608644
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20204729
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:3076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20135907
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:5076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20645952
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.89.176:5076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20182029
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20139160
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20461233
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.81.84:5076?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20967288
+trojan://381f2e86233720eacda26d50e9aa26da@160.16.63.16:1281?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20331724
+trojan://381f2e86233720eacda26d50e9aa26da@160.16.63.16:3901?security=tls&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20780105
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?security=tls&sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20471038
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20929631
+trojan://869e9086806483ca4744a4cb0f3d6e16@160.16.106.99:544?sni=www.nintendogames.net&path=/#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20160204
+trojan://dd2f25b4c70689de8bc0f7fa9d6591cb@202.181.103.246:1334?security=tls&insecure=1&headerType=none&type=tcp&allowInsecure=1&sni=www.nintendogames.net#%F0%9F%87%AF%F0%9F%87%B5%20ShatakVPN%20678285
+trojan://09007daa-a345-4ec2-b3e8-37068855f877@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20262929
+trojan://3c9e4a24-aa0f-4571-970b-d374ccded73b@220.130.58.136:31102?security=tls&sni=green2.cdntencentmusic.com#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20343773
+trojan://3d6feccc-ce86-4bf9-b943-207df9818ad5@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20479154
+trojan://46fb0d3a-8fe4-417c-b974-7dec112740f6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20624149
+trojan://4d1dd99b-33b5-4fbd-8a29-282815fc352b@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20487659
+trojan://5c762006-ed60-4b35-b8fe-4520adeac906@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20799126
+trojan://655a3e72-788e-41c1-8c23-6032490c64a0@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20651157
+trojan://66f19341-ba12-4446-9bb3-fc4e36d5cac7@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20143392
+trojan://98edcf90-4337-47e3-b389-7923f67aefc7@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20328573
+trojan://b41d2d22-2649-426a-9ee7-99bffdc98418@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20569486
+trojan://d6f4af2b-43c1-49e7-86c9-1d706e8c40ef@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20879222
+trojan://d8b3841a-ece7-4ce7-b2f9-30fc909cbeea@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20855829
+trojan://dec43cf3-32b5-4cad-bc3e-f1b905cc9dc6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20567229
+trojan://e77009cf-13db-4014-87d1-800bcfa9e173@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20895971
+trojan://f0d85635-6590-4a39-9e9d-10d49fdab2e2@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20600962
+trojan://f4e646fb-d984-444d-9fee-65068ce0a0d6@220.130.58.136:31103?sni=green2.cdntencentmusic.com&path=/#%F0%9F%87%B9%F0%9F%87%BC%20ShatakVPN%20625195
+trojan://869e9086806483ca4744a4cb0f3d6e16@58.152.18.124:443?security=tls&sni=www.nintendogames.net&type=tcp&path=/#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20546245
+trojan://869e9086806483ca4744a4cb0f3d6e16@58.152.18.124:443?sni=www.nintendogames.net&path=/#%F0%9F%87%AD%F0%9F%87%B0%20ShatakVPN%20455166
+trojan://OdgHycGphesfLmPMYolUF@172.238.229.254:14051?security=tls&amp;headerType=none&amp;type=tcp&amp;sni=api.avito.ru#%F0%9F%87%AE%F0%9F%87%B9%20ShatakVPN%20294161
+trojan://fe793ec6-b7a9-4f30-b623-d3c9ca6eb37c@ssr-de-152.rosena.ggff.net:19233?sni=ssr-de-152.rosena.ggff.net&alpn=http/1.1&path=/#%F0%9F%8F%B3%EF%B8%8F%20ShatakVPN%20866536
+trojan://kuGDUhAYqXnvIomV0Kdljfor@167.17.70.117:27234?security=tls&amp;headerType=none&amp;type=tcp#%F0%9F%87%B3%F0%9F%87%B1%20ShatakVPN%20801788
+trojan://telegram-id-directvpn@13.37.69.223:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20431666
+trojan://telegram-id-directvpn@15.236.111.194:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20482904
+trojan://telegram-id-directvpn@3.123.120.25:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20220384
+trojan://telegram-id-directvpn@51.44.195.232:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20587509
+trojan://telegram-id-directvpn@52.59.174.18:22223?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20372896
+trojan://telegram-id-privatevpns@13.37.69.223:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20185269
+trojan://telegram-id-privatevpns@15.236.111.194:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20695764
+trojan://telegram-id-privatevpns@3.123.120.25:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20421972
+trojan://telegram-id-privatevpns@35.181.195.29:22222?security=tls&amp;alpn=http/1.1&amp;headerType=none&amp;type=tcp&amp;sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20447517
+trojan://telegram-id-privatevpns@51.44.195.232:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%AB%F0%9F%87%B7%20ShatakVPN%20541506
+trojan://telegram-id-privatevpns@52.59.174.18:22222?security=tls&alpn=http/1.1&headerType=none&type=tcp&sni=trojan.burgerip.co.uk#%F0%9F%87%A9%F0%9F%87%AA%20ShatakVPN%20495207
+trojan://tpCznR-P5%3DjZUb%23c@66.245.193.152:17126?security=tls&headerType=none&type=tcp&sni=ctaldikgfyw.uefahpgsyz.click#%F0%9F%87%AC%F0%9F%87%A7%20ShatakVPN%20619394
