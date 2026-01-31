@@ -165,3 +165,13 @@ https://raw.githubusercontent.com/Ai123999/2Tues/refs/heads/main/2Tues_Notorgame
 https://raw.githubusercontent.com/Ai123999/WhiteeListSub/refs/heads/main/whitelistkeys
 https://raw.githubusercontent.com/Ai123999/WhiteKeys/refs/heads/main/WhiteKeys
 https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/main/configs/russia_whitelist.txt
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/1Mond
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/2Tues
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/3Wend
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/4Thur
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/5Frid
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/6Satu
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/7Sand
+https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/WhiteKeys
+https://raw.githubusercontent.com/Egkaz/Proxy-list-20k-server/refs/heads/main/stable.txt
+https://raw.githubusercontent.com/zipvpn/FreeVPNNodes/refs/heads/main/free_v2ray_xray_nodes.txt

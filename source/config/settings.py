@@ -41,7 +41,11 @@ EXTRA_URLS_FOR_BYPASS = [
     "https://wlr.s3-website.cloud.ru/zNhbYZtBc",
     "https://raw.githubusercontent.com/DarkFirexs/Whitelist-bypass_VPN/refs/heads/main/Whitelist%20%7C%20VPN",
     "https://nowmeow.pw/8ybBd3fdCAQ6Ew5H0d66Y1hMbh63GpKUtEXQClIu/whitelist",
-    "https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/refs/heads/main/configs/russia_whitelist.txt"
+    "https://raw.githubusercontent.com/FLEXIY0/matryoshka-vpn/refs/heads/main/configs/russia_whitelist.txt",
+    "https://gitverse.ru/api/repos/Vsevj/OBS/raw/branch/master/wwh",
+    "https://raw.githubusercontent.com/vsevjik/OBSpiskov/refs/heads/main/wwh",
+    "https://raw.githubusercontent.com/twinkalex1470-crypto/CatWhiteVPN/refs/heads/main/CaTWhiteVPN.txt",
+    "https://fsub.flux.2bd.net/githubmirror/bypass/bypass-all.txt"
 ]
 
 # Base64-encoded subscription URLs
