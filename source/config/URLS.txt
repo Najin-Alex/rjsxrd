@@ -175,3 +175,6 @@ https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/
 https://raw.githubusercontent.com/terik21/HiddifySubs-VlessKeys/refs/heads/main/WhiteKeys
 https://raw.githubusercontent.com/Egkaz/Proxy-list-20k-server/refs/heads/main/stable.txt
 https://raw.githubusercontent.com/zipvpn/FreeVPNNodes/refs/heads/main/free_v2ray_xray_nodes.txt
+https://sub-001.dns-on-fire.net/api/sub/WpvDBdKeyFmduo2f
+https://raw.githubusercontent.com/gbwltg/gbwl/refs/heads/main/m2EsPqwmlc
+https://cdn.griffon-guard.com/sub/78aTNPUZKV-4AQBn
