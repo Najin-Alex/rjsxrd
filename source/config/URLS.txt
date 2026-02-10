@@ -178,3 +178,4 @@ https://raw.githubusercontent.com/zipvpn/FreeVPNNodes/refs/heads/main/free_v2ray
 https://sub-001.dns-on-fire.net/api/sub/WpvDBdKeyFmduo2f
 https://raw.githubusercontent.com/gbwltg/gbwl/refs/heads/main/m2EsPqwmlc
 https://cdn.griffon-guard.com/sub/78aTNPUZKV-4AQBn
+https://cdn.griffon-guard.com/sub/xyQ0DZKqYxgvgWDe
